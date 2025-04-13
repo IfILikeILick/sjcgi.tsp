@@ -1,0 +1,24 @@
+
+<!doctype html><!-- (C)2025 E M Drayton, here by permission; using: (tbc)
+
+TODO: obtain dostSyncly properly; use 'bootstrap trick' for para & text
+                -->
+<html><head>
+
+<script src="/sjengcgi.js" defer></script>
+<script>
+  const globje_ = (() => { }).constructor('return this')();
+  globje_['nonono_para1_']= document.getElementById('para1');
+  globje_['nonono_text1_']= document.getElementById('text1');
+</script>
+
+</head><body>
+
+  <h1>Local CGI Sjeng chess</h1>
+  <code><p id="para1"></p></code>  
+  <p> <label for="txtin">Move</label>
+  <input type="textarea" id="text1" name="txtin" value=""
+         onchange="dostSyncly(this.id, this.value.toString())" />
+  </p>
+
+</body></html>
