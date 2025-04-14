@@ -1,17 +1,20 @@
 
-var game= ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
-const globje= ( ()=>{} ).constructor('return this')();
+((()=>{ var game= ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
+;;const set_timeout= (ms :number
+                  )=>(fn :(d :any)=>any, ...args :any[]
+                  )=>setTimeout(fn, ms, ...args);
+        set_timeout(0)(()=>{ // unnecessary
 
-globje['sjeng_para1_']= document.getElementById('para1'); // pro tem
-globje['sjeng_text1_']= document.getElementById('text1'); // pro tem
+;;interface Obje { [key: string]: any; };
+const globje = ( ()=>{} ).constructor('return this;')() as Obje;
 
-const para1= globje['sjeng_para1_'] as HTMLParagraphElement;
-const text1= globje['sjeng_text1_'] as HTMLTextAreaElement;
+const para1= globje['para1_'] as HTMLParagraphElement;
+const text1= globje['text1_'] as HTMLTextAreaElement;
 
 const a_square= (idy :number
            )=>(it_ :string, idx :number)=>{
   const it= it_.trim();
-  return String.fromCharCode(((idx+idy&1? '#': ' ')+it).slice(-1).charCodeAt(0)+(it.length!==2? 0: 32));
+  return String.fromCharCode(((idx+idy&1? ' ': '-')+it).slice(-1).charCodeAt(0)+(it.length!==2? 0: 32));
 }
 
 function a_rank(it :string, idy :number) {
@@ -26,7 +29,7 @@ async function dostAsyncly(elem :HTMLParagraphElement, what :string, move :strin
   const reply= gamma[gamma.length-10] || null;
   if (reply) {} else return beta;
   game+= move + reply + '&';
-//  iel.value= '';
+  text1.value= '';
   const board= gamma.slice(-9, -1).map(a_rank).join('<br />');
   const edge1= board.charCodeAt(0)&1? '@ h g f e d c b a @': '@ A B C D E F G H @';
   const edge2= board.charCodeAt(0)&1? '@ H G F E D C B A @': '@ a b c d e f g h @';
@@ -44,3 +47,8 @@ function dostSyncly(at :string, it :string) { at;
     const prom= dostAsyncly(para1, ante+game+move+post, move); prom;
   }
 }
+
+globje['dostSyncly']= dostSyncly;
+
+});
+})());/**/
