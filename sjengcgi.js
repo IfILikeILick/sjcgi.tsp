@@ -10,10 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 var game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
 const globje = (() => { }).constructor('return this')();
+/** */
 globje['sjeng_para1_'] = document.getElementById('para1'); // pro tem
 globje['sjeng_text1_'] = document.getElementById('text1'); // pro tem
-const para1 = globje['sjeng_para1_'];
-const text1 = globje['sjeng_text1_'];
+/**/
+const para1 = globje['para1_'];
+const text1 = globje['text1_'];
 const a_square = (idy) => (it_, idx) => {
     const it = it_.trim();
     return String.fromCharCode(((idx + idy & 1 ? '#' : ' ') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32));
