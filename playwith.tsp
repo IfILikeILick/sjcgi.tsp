@@ -10,10 +10,10 @@
 ;interface Obje { [key: string]: any; };
 const globje= ( ()=>{} ).constructor('return this;')() as Obje;
 
-// SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
-const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu±×ck☆★□■◇◆itbrokesomehow_•_';
-              )=>(idy :number                     // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
-              )=>(it_ :string, idx :number)=>{ const syms= pref+'△▲ohnofu□■ck☆★◎♥◇◆itbrokesomehow_•_±×_';
+// SYMS= " ·•□■○●◎◉△▲☆★◇◆ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ ʘwʙxθɵ ʘ◎ʘ øʘθØø ♔♚♕♛♖♜♗♝♘♞♙♟"
+const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
+              )=>(idy :number                     // syms= pref+'△▲○hn●fu□■ck☆★◎♥◇◆itbrokesomehow_•_±×◎↑↓';
+              )=>(it_ :string, idx :number)=>{ const syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
   ;
   if (veracity) {} else if ((twice>>= 1)===0) {} else { console.log(syms); }
   const it= it_.trim();  if (idx+7>>>3^1) return it;
@@ -23,7 +23,7 @@ const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu±�
 // console.log("It's a '"+sym+"': "+it_);
   return sym; // String.fromCharCode(sym);
 };
-const a_square= the_squares_(' ·○●'); // TODO= '◎' and NBSP
+const a_square= the_squares_(' ·♙♟'); // TODO= '◎' and NBSP
 const o_square= the_squares_(' ·↓↑');
 const e_square= the_squares_(' ·↑↓');
 
