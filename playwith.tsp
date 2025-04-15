@@ -10,9 +10,10 @@
 ;interface Obje { [key: string]: any; };
 const globje= ( ()=>{} ).constructor('return this;')() as Obje;
 
-const a_square= (pref :string, twice= 2           // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
-              )=>(idy :number                     // syms= ' ·☆★△▲ohnofu±×ck○●□■◇◆itbrokesomehow_•_';
-              )=>(it_ :string, idx :number)=>{ const syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
+// SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
+const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu±×ck☆★□■◇◆itbrokesomehow_•_';
+              )=>(idy :number                     // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
+              )=>(it_ :string, idx :number)=>{ const syms= pref+'△▲ohnofu□■ck☆★◎♥◇◆itbrokesomehow_•_±×_';
   ;
   if (veracity) {} else if ((twice>>= 1)===0) {} else { console.log(syms); }
   const it= it_.trim();  if (idx+7>>>3^1) return it;
@@ -22,11 +23,13 @@ const a_square= (pref :string, twice= 2           // SYMS= " ·•□■○◎�
 // console.log("It's a '"+sym+"': "+it_);
   return sym; // String.fromCharCode(sym);
 };
-const o_square= a_square(' ·↓↑');
-const e_square= a_square(' ·↑↓');
+const a_square= the_squares_(' ·○●'); // TODO= '◎' and NBSP
+const o_square= the_squares_(' ·↓↑');
+const e_square= the_squares_(' ·↑↓');
 
 const a_rank= (parity :number)=>(it :string, idy :number)=>{
-  const the_square= parity? o_square: e_square;
+  const the_squares= parity? o_square: e_square; a_square;
+  const the_square= veracity? the_squares: a_square;
   return (it+it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
 }
 
