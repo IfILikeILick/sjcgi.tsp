@@ -80,9 +80,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     + qf(' ') + qf('P') + qf('b')
                     + qf('N') + qf('r') + qf('Q')
                     + qf('K') + qf('k') + qf('q'));
-            }
+            }    /**
             if (it.length >>> 1 !== 2) { }
-            else {
+            else /**/ {
                 const move = it ? it + '&' : '';
                 const ante = "http://localhost/cgi-bin/sj5s.sh?d&force&st?5&";
                 const post = "go&&d&quit";
@@ -101,7 +101,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
     set_timeout(1230)(() => {
         console.log("It's "
-            + (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4'));
+            + (() => { }).constructor('return this;')()['dostSyncly']('', 'g1f3&b8c6&f3g1&c6b8'));
         //
     });
     //
