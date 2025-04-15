@@ -10,27 +10,35 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 ((() => {
     var game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
-    ;
-    ;
+    const veracity = true;
+    const falsity = false;
     const set_timeout = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
     set_timeout(0)(() => {
         ;
         ;
-        ;
         const globje = (() => { }).constructor('return this;')();
-        //var once= 2; // ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒
-        const a_square = (idy) => (it_, idx) => {
-            const syms = '·•○●△▲ohnofu±×ck☆★□■◇◆itbrokesomehow';
+        const a_square_ = (once = 2 // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
+        ) => (idy // syms= ' ·☆★△▲ohnofu±×ck○●□■◇◆itbrokesomehow_•_';
+        ) => (it_, idx) => {
+            const syms = ' ·↑↓△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
+            ;
+            if (veracity) { }
+            else if ((once >>= 1) === 0) { }
+            else {
+                console.log(syms);
+            }
             const it = it_.trim();
             const alph = (((idx + idy & 1 ? ' ' : '-') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32)) & 127;
             const alph2 = alph >> 5, alph5 = alph & 31;
             const sym = syms.charAt(alph2 >> 1 ? (alph & 3 ? alph5 & 30 : 0) + alph2 : alph5 & 1);
-            /* console.log("It's a '"+sym+"': "+it_); /**/
+            // console.log("It's a '"+sym+"': "+it_);
             return sym; // String.fromCharCode(sym);
         };
+        const a_square = a_square_();
         function a_rank(it, idy) {
             return (it + it.slice(0, 2)).split('\|').map(a_square(idy)).join('&nbsp;');
         }
+        /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
         function dostAsyncly(elem, field, what, move) {
             return __awaiter(this, void 0, void 0, function* () {
                 const alpha = yield fetch(what); // const response = await fetch(url);
@@ -65,14 +73,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             at;
             const para1 = globje['para1_'];
             const text1 = globje['text1_'];
-            /**\
-         /* const qf= (x :string)=>(a_square(0)(x, 0));
-         
-         console.log("It's "+it
-           + qf(' ')  + qf('P')  + qf('b')
-           + qf('N')  + qf('r')  + qf('Q')
-           + qf('K')  + qf('k')  + qf('q')
-         ); /**/
+            if (veracity) { }
+            else {
+                const qf = (x) => (a_square(0)(x, 0));
+                console.log("It's " + it
+                    + qf(' ') + qf('P') + qf('b')
+                    + qf('N') + qf('r') + qf('Q')
+                    + qf('K') + qf('k') + qf('q'));
+            }
             if (it.length >>> 1 !== 2) { }
             else {
                 const move = it ? it + '&' : '';
@@ -82,16 +90,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 prom;
             }
         }
-        {
+        if (veracity) { }
+        else {
             var _;
             var _ = dostSyncly;
             _;
         } // typecheck
         globje['dostSyncly'] = dostSyncly;
+        //
     });
     set_timeout(1230)(() => {
         console.log("It's "
-            + (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4&e7e5'));
+            + (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4'));
+        //
     });
+    //
 })()); /**/
 ;
