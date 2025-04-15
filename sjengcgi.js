@@ -23,7 +23,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu±×ck☆★□■◇◆itbrokesomehow_•_';
         ) => (idy // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
         ) => (it_, idx) => {
-            const syms = pref + '△▲ohnofu□■ck☆★㈜♥◇◆itbrokesomehow_•_±×_◎';
+            const syms = pref + '△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_◎◉';
             ;
             if (veracity) { }
             else if ((twice >>= 1) === 0) { }
@@ -39,7 +39,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             // console.log("It's a '"+sym+"': "+it_);
             return sym; // String.fromCharCode(sym);
         };
-        const a_square = the_squares_(' ·○●'); // TODO= '◎' and NBSP
+        const a_square = the_squares_(' ·◎◉'); // TODO= '◎' and NBSP
         const o_square = the_squares_(' ·↓↑');
         const e_square = the_squares_(' ·↑↓');
         const a_rank = (parity) => (it, idy) => {
