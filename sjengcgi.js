@@ -12,32 +12,39 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     var game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
     const veracity = true;
     const falsity = false;
+    veracity;
+    falsity;
     const set_timeout = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
     set_timeout(0)(() => {
         ;
         ;
         const globje = (() => { }).constructor('return this;')();
-        const a_square_ = (once = 2 // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
+        const a_square_ = (pref, twice = 2 // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
         ) => (idy // syms= ' ·☆★△▲ohnofu±×ck○●□■◇◆itbrokesomehow_•_';
         ) => (it_, idx) => {
-            const syms = ' ·↑↓△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
+            const syms = pref + '△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
             ;
             if (veracity) { }
-            else if ((once >>= 1) === 0) { }
+            else if ((twice >>= 1) === 0) { }
             else {
                 console.log(syms);
             }
             const it = it_.trim();
+            if (idx + 7 >>> 3 ^ 1) { }
+            else
+                return it;
             const alph = (((idx + idy & 1 ? ' ' : '-') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32)) & 127;
             const alph2 = alph >> 5, alph5 = alph & 31;
             const sym = syms.charAt(alph2 >> 1 ? (alph & 3 ? alph5 & 30 : 0) + alph2 : alph5 & 1);
             // console.log("It's a '"+sym+"': "+it_);
             return sym; // String.fromCharCode(sym);
         };
-        const a_square = a_square_();
-        function a_rank(it, idy) {
-            return (it + it.slice(0, 2)).split('\|').map(a_square(idy)).join('&nbsp;');
-        }
+        const o_square = a_square_(' ·↑↓');
+        const e_square = a_square_(' ·↓↑');
+        const a_rank = (parity) => (it, idy) => {
+            const the_square = parity ? o_square : e_square;
+            return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
+        };
         /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
         function dostAsyncly(elem, field, what, move) {
             return __awaiter(this, void 0, void 0, function* () {
@@ -52,15 +59,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else
                     return beta;
                 const gamma = beta.split('\n');
-                const reply = gamma[gamma.length - 10] || null;
-                if (reply) { }
+                const parity = (gamma[gamma.length - 11].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 16;
+                const reply = gamma[gamma.length - 10].trim() || null;
+                if (parity < 2 && reply && reply.length >>> 1 === 2) { }
                 else
                     return beta;
                 game += move + reply + '&';
                 field.value = '';
-                const board = gamma.slice(-9, -1).map(a_rank).join('<br />');
-                const edge1 = board.charCodeAt(0) & 1 ? '◎ h g f e d c b a ◎' : '◎ A B C D E F G H ◎';
-                const edge2 = board.charCodeAt(0) & 1 ? '◎ H G F E D C B A ◎' : '◎ a b c d e f g h ◎';
+                const board = gamma.slice(-9, -1).map(a_rank(parity)).join('<br />');
+                const edge1 = parity ? '◎ h g f e d c b a ◎' : '◎ A B C D E F G H ◎';
+                const edge2 = parity ? '◎ H G F E D C B A ◎' : '◎ a b c d e f g h ◎';
                 const rslt = edge1 + '<br />' + board + '<br />' + edge2;
                 if (elem)
                     elem.innerHTML = rslt;
@@ -75,14 +83,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             const text1 = globje['text1_'];
             if (veracity) { }
             else {
-                const qf = (x) => (a_square(0)(x, 0));
+                const qf = (x) => (e_square(0)(x, 0));
                 console.log("It's " + it
                     + qf(' ') + qf('P') + qf('b')
                     + qf('N') + qf('r') + qf('Q')
                     + qf('K') + qf('k') + qf('q'));
-            }    /**
+            }
             if (it.length >>> 1 !== 2) { }
-            else /**/ {
+            else {
                 const move = it ? it + '&' : '';
                 const ante = "http://localhost/cgi-bin/sj5s.sh?d&force&st?5&";
                 const post = "go&&d&quit";
@@ -101,7 +109,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
     set_timeout(1230)(() => {
         console.log("It's "
-            + (() => { }).constructor('return this;')()['dostSyncly']('', 'g1f3&b8c6&f3g1&c6b8'));
+            + (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4'));
         //
     });
     //
