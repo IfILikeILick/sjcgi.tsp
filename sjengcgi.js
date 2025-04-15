@@ -19,11 +19,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         ;
         ;
         const globje = (() => { }).constructor('return this;')();
-        // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ ʘwʙxθɵ ʘ◎ʘ øʘθØø ♔♚♕♛♖♜♗♝♘♞♙♟"
+        // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ⚪⚫ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ ʘwʙxθɵ ʘ◎ʘ øʘθØø ♔♚♕♛♖♜♗♝♘♞♙♟"
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
-        ) => (idy // syms= pref+'△▲○hn●fu□■ck☆★◎♥◇◆itbrokesomehow_•_±×◎↑↓';
+        ) => (idy // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
         ) => (it_, idx) => {
-            const syms = pref + '♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
+            const syms = pref + '△▲○hn●fu□■ck☆★⚪⚫◇◆itbrokesomehow_•_±×◎↑↓';
             ;
             if (veracity) { }
             else if ((twice >>= 1) === 0) { }
@@ -39,13 +39,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             // console.log("It's a '"+sym+"': "+it_);
             return sym; // String.fromCharCode(sym);
         };
-        const a_square = the_squares_(' ·♙♟'); // TODO= '◎' and NBSP
+        const a_square = the_squares_(' ·○●'); // TODO= '◎' and NBSP
         const o_square = the_squares_(' ·↓↑');
         const e_square = the_squares_(' ·↑↓');
         const a_rank = (parity) => (it, idy) => {
             const the_squares = parity ? o_square : e_square;
             a_square;
-            const the_square = veracity ? the_squares : a_square;
+            const the_square = !veracity ? the_squares : a_square;
             return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
         };
         /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
