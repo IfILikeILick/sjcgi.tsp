@@ -19,11 +19,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         ;
         ;
         const globje = (() => { }).constructor('return this;')();
-        // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
+        // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ ʘwʙxθɵ ʘ◎ʘ øʘθØø"
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu±×ck☆★□■◇◆itbrokesomehow_•_';
         ) => (idy // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
         ) => (it_, idx) => {
-            const syms = pref + '△▲ohnofu□■ck☆★◎♥◇◆itbrokesomehow_•_±×_';
+            const syms = pref + '△▲ohnofu□■ck☆★㈜♥◇◆itbrokesomehow_•_±×_◎';
             ;
             if (veracity) { }
             else if ((twice >>= 1) === 0) { }
@@ -45,7 +45,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const a_rank = (parity) => (it, idy) => {
             const the_squares = parity ? o_square : e_square;
             a_square;
-            const the_square = !veracity ? the_squares : a_square;
+            const the_square = veracity ? the_squares : a_square;
             return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
         };
         /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
