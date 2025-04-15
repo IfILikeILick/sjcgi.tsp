@@ -19,7 +19,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         ;
         ;
         const globje = (() => { }).constructor('return this;')();
-        const a_square_ = (pref, twice = 2 // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
+        const a_square = (pref, twice = 2 // SYMS= " ·•□■○◎●△▲☆★◇◆ ♥♠ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ "
         ) => (idy // syms= ' ·☆★△▲ohnofu±×ck○●□■◇◆itbrokesomehow_•_';
         ) => (it_, idx) => {
             const syms = pref + '△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×_';
@@ -30,8 +30,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 console.log(syms);
             }
             const it = it_.trim();
-            if (!(idx + 7 >>> 3 ^ 1)) { }
-            else
+            if (idx + 7 >>> 3 ^ 1)
                 return it;
             const alph = (((idx + idy & 1 ? ' ' : '-') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32)) & 127;
             const alph2 = alph >> 5, alph5 = alph & 31;
@@ -39,8 +38,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             // console.log("It's a '"+sym+"': "+it_);
             return sym; // String.fromCharCode(sym);
         };
-        const o_square = a_square_(' ·↑↓');
-        const e_square = a_square_(' ·↓↑');
+        const o_square = a_square(' ·↓↑');
+        const e_square = a_square(' ·↑↓');
         const a_rank = (parity) => (it, idy) => {
             const the_square = parity ? o_square : e_square;
             return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
@@ -67,8 +66,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 game += move + reply + '&';
                 field.value = '';
                 const board = gamma.slice(-9, -1).map(a_rank(parity)).join('<br />');
-                const edge1 = parity ? '◎ h g f e d c b a ◎' : '◎ A B C D E F G H ◎';
-                const edge2 = parity ? '◎ H G F E D C B A ◎' : '◎ a b c d e f g h ◎';
+                const edge2 = parity ? '◎ h g f e d c b a ◎' : '◎ A B C D E F G H ◎';
+                const edge1 = parity ? '◎ H G F E D C B A ◎' : '◎ a b c d e f g h ◎';
                 const rslt = edge1 + '<br />' + board + '<br />' + edge2;
                 if (elem)
                     elem.innerHTML = rslt;
