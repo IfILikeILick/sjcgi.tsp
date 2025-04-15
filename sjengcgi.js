@@ -30,7 +30,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 console.log(syms);
             }
             const it = it_.trim();
-            if (idx + 7 >>> 3 ^ 1) { }
+            if (!(idx + 7 >>> 3 ^ 1)) { }
             else
                 return it;
             const alph = (((idx + idy & 1 ? ' ' : '-') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32)) & 127;
