@@ -70,8 +70,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 game += move + reply + '&';
                 field.value = '';
                 const board = gamma.slice(-9, -1).map(a_rank(unrotated)).join('<br />');
-                const upper = unrotated ? '◉ h g f e d c b a ◉' : '◎ a b c d e f g h ◎';
-                const lower = unrotated ? '◎ h g f e d c b a ◎' : '◉ a b c d e f g h ◉';
+                const upper = unrotated ? '◉ a b c d e f g h ◉' : '◎ h g f e d c b a ◎';
+                const lower = unrotated ? '◎ a b c d e f g h ◎' : '◉ h g f e d c b a ◉';
                 const rslt = upper + '<br />' + board + '<br />' + lower;
                 if (elem)
                     elem.innerHTML = rslt;

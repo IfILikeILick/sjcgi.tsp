@@ -49,8 +49,8 @@ async function dostAsyncly(elem :HTMLParagraphElement, field :HTMLTextAreaElemen
   if (unrotated<2 && reply && reply.length>>>1===2) {} else return beta;
   game+= move + reply + '&';  field.value= '';
   const board= gamma.slice(-9, -1).map(a_rank(unrotated)).join('<br />');
-  const upper= unrotated? '◉ h g f e d c b a ◉': '◎ a b c d e f g h ◎';
-  const lower= unrotated? '◎ h g f e d c b a ◎': '◉ a b c d e f g h ◉';
+  const upper= unrotated? '◉ a b c d e f g h ◉': '◎ h g f e d c b a ◎';
+  const lower= unrotated? '◎ a b c d e f g h ◎': '◉ h g f e d c b a ◉';
   const rslt= upper + '<br />' + board + '<br />' + lower;
 
   if (elem) elem.innerHTML= rslt; else console.log(rslt);
@@ -117,3 +117,4 @@ console.log("It's "
 ⛠⛡⛢⛣⛤⛥⛦⛧⛨⛩⛪⛫⛬⛭⛮⛯
 ⛰⛱⛲⛳⛴⛵⛶⛷⛸⛹⛺⛻⛼⛽⛾⛿
  \**/
+
