@@ -42,10 +42,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const a_square = the_squares_(' ·○●'); // TODO= '◎' and NBSP
         const o_square = the_squares_(' ·↓↑');
         const e_square = the_squares_(' ·↑↓');
-        const a_rank = (parity) => (it, idy) => {
-            const the_squares = parity ? o_square : e_square;
+        const a_rank = (unrotated) => (it, idy) => {
+            const the_squares = unrotated ? e_square : o_square;
             a_square;
-            const the_square = !veracity ? the_squares : a_square;
+            const the_square = !!falsity ? the_squares : a_square;
             return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
         };
         /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
@@ -62,16 +62,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else
                     return beta;
                 const gamma = beta.split('\n');
-                const parity = (gamma[gamma.length - 9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 16;
+                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 17;
                 const reply = gamma[gamma.length - 10].trim() || null;
-                if (parity < 2 && reply && reply.length >>> 1 === 2) { }
+                if (unrotated < 2 && reply && reply.length >>> 1 === 2) { }
                 else
                     return beta;
                 game += move + reply + '&';
                 field.value = '';
-                const board = gamma.slice(-9, -1).map(a_rank(parity)).join('<br />');
-                const lower = parity ? '◉ h g f e d c b a ◉' : '◎ a b c d e f g h ◎';
-                const upper = parity ? '◎ h g f e d c b a ◎' : '◉ a b c d e f g h ◉';
+                const board = gamma.slice(-9, -1).map(a_rank(unrotated)).join('<br />');
+                const upper = unrotated ? '◉ h g f e d c b a ◉' : '◎ a b c d e f g h ◎';
+                const lower = unrotated ? '◎ h g f e d c b a ◎' : '◉ a b c d e f g h ◉';
                 const rslt = upper + '<br />' + board + '<br />' + lower;
                 if (elem)
                     elem.innerHTML = rslt;
@@ -118,3 +118,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     //
 })()); /**/
 ;
+

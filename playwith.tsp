@@ -10,10 +10,10 @@
 ;interface Obje { [key: string]: any; };
 const globje= ( ()=>{} ).constructor('return this;')() as Obje;
 
-// SYMS= " ·•□■○●◎◉△▲☆★◇◆ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ ʘwʙxθɵ ʘ◎ʘ øʘθØø ♔♚♕♛♖♜♗♝♘♞♙♟"
+// SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
 const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
-              )=>(idy :number                     // syms= pref+'△▲○hn●fu□■ck☆★◎♥◇◆itbrokesomehow_•_±×◎↑↓';
-              )=>(it_ :string, idx :number)=>{ const syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
+              )=>(idy :number                     // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
+              )=>(it_ :string, idx :number)=>{ const syms= pref+'△▲○hn●fu□■ck⚐⚑☖☗◇◆itbrokesomehow_•_±×◎↑↓';
   ;
   if (veracity) {} else if ((twice>>= 1)===0) {} else { console.log(syms); }
   const it= it_.trim();  if (idx+7>>>3^1) return it;
@@ -23,13 +23,13 @@ const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu□
 // console.log("It's a '"+sym+"': "+it_);
   return sym; // String.fromCharCode(sym);
 };
-const a_square= the_squares_(' ·♙♟'); // TODO= '◎' and NBSP
+const a_square= the_squares_(' ·○●'); // TODO= '◎' and NBSP
 const o_square= the_squares_(' ·↓↑');
 const e_square= the_squares_(' ·↑↓');
 
-const a_rank= (parity :number)=>(it :string, idy :number)=>{
-  const the_squares= parity? o_square: e_square; a_square;
-  const the_square= veracity? the_squares: a_square;
+const a_rank= (unrotated :number)=>(it :string, idy :number)=>{
+  const the_squares= unrotated? e_square: o_square; a_square;
+  const the_square= !!falsity? the_squares: a_square;
   return (it+it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
 }
 
@@ -44,14 +44,14 @@ async function dostAsyncly(elem :HTMLParagraphElement, field :HTMLTextAreaElemen
   const beta= await alpha.text();
   if (beta.indexOf('llegal') < 0) {} else return beta;
   const gamma= beta.split('\n');
-  const parity= (gamma[gamma.length-11].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 16;
+  const unrotated= (gamma[gamma.length-9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 17;
   const reply= gamma[gamma.length-10].trim() || null;
-  if (parity<2 && reply && reply.length>>>1===2) {} else return beta;
+  if (unrotated<2 && reply && reply.length>>>1===2) {} else return beta;
   game+= move + reply + '&';  field.value= '';
-  const board= gamma.slice(-9, -1).map(a_rank(parity)).join('<br />');
-  const edge2= parity? '◎ h g f e d c b a ◎': '◎ A B C D E F G H ◎';
-  const edge1= parity? '◎ H G F E D C B A ◎': '◎ a b c d e f g h ◎';
-  const rslt= edge1 + '<br />' + board + '<br />' + edge2;
+  const board= gamma.slice(-9, -1).map(a_rank(unrotated)).join('<br />');
+  const upper= unrotated? '◉ h g f e d c b a ◉': '◎ a b c d e f g h ◎';
+  const lower= unrotated? '◎ h g f e d c b a ◎': '◉ a b c d e f g h ◉';
+  const rslt= upper + '<br />' + board + '<br />' + lower;
 
   if (elem) elem.innerHTML= rslt; else console.log(rslt);
 
@@ -99,3 +99,21 @@ console.log("It's "
 
 ;type my_t_= (at :string, it :string)=>void;
 
+ /**\
+☀☁☂☃☄★☆☇☈☉☊☋☌☍☎☏
+☐☑☒☓☔☕☖☗☘☙☚☛☜☝☞☟
+☠☡☢☣☤☥☦☧☨☩☪☫☬☭☮☯
+☰☱☲☳☴☵☶☷☸☹☺☻☼☽☾☿
+♀♁♂♃♄♅♆♇♈♉♊♋♌♍♎♏
+♐♑♒♓♔♕♖♗♘♙♚♛♜♝♞♟
+♠♡♢♣♤♥♦♧♨♩♪♫♬♭♮♯
+♰♱♲♳♴♵♶♷♸♹♺♻♼♽♾♿
+⚀⚁⚂⚃⚄⚅⚆⚇⚈⚉⚊⚋⚌⚍⚎⚏
+⚐⚑⚒⚓⚔⚕⚖⚗⚘⚙⚚⚛⚜⚝⚞⚟
+⚠⚡⚢⚣⚤⚥⚦⚧⚨⚩⚪⚫⚬⚭⚮⚯
+⚰⚱⚲⚳⚴⚵⚶⚷⚸⚹⚺⚻⚼⚽⚾⚿
+⛀⛁⛂⛃⛄⛅⛆⛇⛈⛉⛊⛋⛌⛍⛎⛏
+⛐⛑⛒⛓⛔⛕⛖⛗⛘⛙⛚⛛⛜⛝⛞⛟
+⛠⛡⛢⛣⛤⛥⛦⛧⛨⛩⛪⛫⛬⛭⛮⛯
+⛰⛱⛲⛳⛴⛵⛶⛷⛸⛹⛺⛻⛼⛽⛾⛿
+ \**/
