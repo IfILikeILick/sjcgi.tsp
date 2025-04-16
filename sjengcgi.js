@@ -62,7 +62,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else
                     return beta;
                 const gamma = beta.split('\n');
-                const parity = (gamma[gamma.length - 11].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 16;
+                const parity = (gamma[gamma.length - 9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 16;
                 const reply = gamma[gamma.length - 10].trim() || null;
                 if (parity < 2 && reply && reply.length >>> 1 === 2) { }
                 else
@@ -70,9 +70,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 game += move + reply + '&';
                 field.value = '';
                 const board = gamma.slice(-9, -1).map(a_rank(parity)).join('<br />');
-                const edge2 = parity ? '◎ h g f e d c b a ◎' : '◎ A B C D E F G H ◎';
-                const edge1 = parity ? '◎ H G F E D C B A ◎' : '◎ a b c d e f g h ◎';
-                const rslt = edge1 + '<br />' + board + '<br />' + edge2;
+                const lower = parity ? '◉ h g f e d c b a ◉' : '◎ a b c d e f g h ◎';
+                const upper = parity ? '◎ h g f e d c b a ◎' : '◉ a b c d e f g h ◉';
+                const rslt = upper + '<br />' + board + '<br />' + lower;
                 if (elem)
                     elem.innerHTML = rslt;
                 else
