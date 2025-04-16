@@ -62,7 +62,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else
                     return beta;
                 const gamma = beta.split('\n');
-                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 17;
+                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0)+7<<3 || 0)/7 >> 3 ^ 9;
                 const reply = gamma[gamma.length - 10].trim() || null;
                 if (unrotated < 2 && reply && reply.length >>> 1 === 2) { }
                 else
