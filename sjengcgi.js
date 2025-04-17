@@ -23,7 +23,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
         ) => (idy // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
         ) => (it_, idx) => {
-            const syms = pref + '△▲○hn●fu□■ck⚐⚑☖☗◇◆itbrokesomehow_•_±×◎↑↓';
+            const syms = pref + '△▲○hn●fu□■ck⚐⚑♡♥◇◆itbrokesomehow_•_±×◎↑↓☖☗';
             ;
             if (veracity) { }
             else if ((twice >>= 1) === 0) { }
