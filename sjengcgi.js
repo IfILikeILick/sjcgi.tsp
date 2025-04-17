@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 ((() => {
-    var game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
+    let game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
     const veracity = true;
     const falsity = false;
     veracity;
@@ -62,7 +62,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else
                     return beta;
                 const gamma = beta.split('\n');
-                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0)+7<<3 || 0)/7 >> 3 ^ 8;
+                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 17;
                 const reply = gamma[gamma.length - 10].trim() || null;
                 if (unrotated < 2 && reply && reply.length >>> 1 === 2) { }
                 else
@@ -103,16 +103,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         }
         if (veracity) { }
         else {
-            var _;
-            var _ = dostSyncly;
+            let _;
+            _ = dostSyncly;
             _;
         } // typecheck
         globje['dostSyncly'] = dostSyncly;
         //
     });
     set_timeout(1230)(() => {
+        var _a;
         console.log("It's "
-            + (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4'));
+            + ((_a = (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4')) !== null && _a !== void 0 ? _a : location.pathname));
         //
     });
     //

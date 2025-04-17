@@ -1,5 +1,5 @@
 
-((()=>{ var game= ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
+((()=>{ let game= ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
 
         const veracity= true; const falsity= false; veracity; falsity;
         const set_timeout= (ms :number
@@ -77,7 +77,7 @@ function dostSyncly(at :string, it :string) { at;
   }
 }
 
-if (veracity) {} else { var _ :my_t_; var _= dostSyncly; _; } // typecheck
+if (veracity) {} else { let _ :my_t_; _= dostSyncly; _; } // typecheck
 
 globje['dostSyncly']= dostSyncly;
 
@@ -86,10 +86,10 @@ globje['dostSyncly']= dostSyncly;
               set_timeout(1230)(()=>{
 
 console.log("It's "
-  + ((( ()=>{} ).constructor('return this;')
+  + (((( ()=>{} ).constructor('return this;')
     () as { [key: string]: any; })
     ['dostSyncly'] as my_t_)
-    ('','e2e4'));
+    ('','e2e4') ?? location.pathname));
 
 //
 });
