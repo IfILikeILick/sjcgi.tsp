@@ -13,7 +13,7 @@ const globje= ( ()=>{} ).constructor('return this;')() as Obje;
 // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
 const the_squares_= (pref :string, twice= 2       // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
               )=>(idy :number                     // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
-              )=>(it_ :string, idx :number)=>{ const syms= pref+'△▲○hn●fu□■ck⚐⚑☖☗◇◆itbrokesomehow_•_±×◎↑↓';
+              )=>(it_ :string, idx :number)=>{ const syms= pref+'△▲○hn●fu□■ck⚐⚑♡♥◇◆itbrokesomehow_•_±×◎↑↓☖☗';
   ;
   if (veracity) {} else if ((twice>>= 1)===0) {} else { console.log(syms); }
   const it= it_.trim();  if (idx+7>>>3^1) return it;
@@ -44,7 +44,7 @@ async function dostAsyncly(elem :HTMLParagraphElement, field :HTMLTextAreaElemen
   const beta= await alpha.text();
   if (beta.indexOf('llegal') < 0) {} else return beta;
   const gamma= beta.split('\n');
-  const unrotated= (gamma[gamma.length-9].trim().charCodeAt(0) || 0) + 15 >> 2 ^ 17;
+  const unrotated =(gamma[gamma.length-9].trim().charCodeAt(0)+7<<3 || 0)/7 >> 3 ^ 8;
   const reply= gamma[gamma.length-10].trim() || null;
   if (unrotated<2 && reply && reply.length>>>1===2) {} else return beta;
   game+= move + reply + '&';  field.value= '';
