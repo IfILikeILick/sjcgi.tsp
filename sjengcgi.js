@@ -196,9 +196,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             const il = it.length;
             const sa__ = decompose(it), sj = sa__.join(''), sl = sj.length;
             //console.log("\n" + it.length + it + "\" -> " + JSON.stringify(sa) + " # = " + sl);
-            if (sl === il) { }
-            else
-                throw 'Not at 121 on 20250422 at 1732';
             const a = sa__.filter(decofilter);
             const t = a.map(decomapping);
             //  a.forEach(f_out, t);
