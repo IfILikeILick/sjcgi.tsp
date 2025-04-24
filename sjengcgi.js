@@ -181,9 +181,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     const nat = parseFloat(v);
                     rv.it = ptv ? 0 - nat : nat;
                 }
-                else if (t !== 95) { }
+                else if (t !== 191
+                    || v.length < 2) { }
                 else if ('number' === typeof rv.it) {
-                    rv._[v] = rv.it;
+                    rv._[v
+                        .substring(1)] = rv.it;
                 }
                 else if ('string' === typeof rv.it) {
                     rv.__[v] = rv.it;
