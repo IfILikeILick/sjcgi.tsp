@@ -174,7 +174,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             a;
             const t = t_[i];
             if (veracity) {
-                const ptv = !(t & 1);
+                const ptv = (t >>> 0 & 1) !== 0;
                 if (t === 190)
                     rv.it = v;
                 else if ((t - 96 >> 0) < 20) {
