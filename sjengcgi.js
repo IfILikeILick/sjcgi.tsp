@@ -119,6 +119,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     set_timeout(666)(() => {
         //
         var _a;
+        function atPlay() { return (location.pathname) === '/play/'; }
+        atPlay;
         const decomposure = /(?:\/-?@?|-?\d+(?:\.\d+)?[-@]|-?[A-Za-z]\w*[-@]|-_\w*[-@]|_[-\.].*?_\._[-@])/g;
         const decompose = (it, NO = '#NONONO:-') => (it.match(decomposure) || [NO + it]);
         const precomposer = (it) => ('/' + ((it || '') + '/').replace(/\//g, '@/'));
@@ -165,30 +167,52 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const emptyobj = () => {
             const n = {};
             const s = {};
-            const rv = { _: n, __: s, it: '', };
+            const rv = { _: n, __: s, it: null, };
             return rv;
         };
         const f_in_ = (t_) => (rv, v, i, a) => {
             a;
             const t = t_[i];
-            switch (t) { // TODO= LOSE= switch; x*10**y; etc etc
-                case 190:
+            if (veracity) {
+                const ptv = t & 1;
+                if (t === 190)
                     rv.it = v;
-                    break;
-                case 96:
-                case 103:
-                case 105:
-                    rv.it = parseFloat(v);
-                    break;
-                default: if ('number' === typeof rv.it) {
+                else if ((t - 48 >> 0) < 20) {
+                    const nat = parseFloat(v);
+                    rv.it = ptv ? 0 - nat : nat;
+                }
+                else if ('number' === typeof rv.it) {
                     rv._[v] = rv.it;
                 }
                 else if ('string' === typeof rv.it) {
                     rv.__[v] = rv.it;
                 }
+                else if (rv.it === null) { }
+                //       else if ('null' === (typeof (rv.it))) {}
                 else
                     throw 'Not at 138 on 20250423 at 2343';
             }
+            else
+                switch (t) { // TODO= LOSE= switch; x*10**y; etc etc
+                    case 190:
+                        rv.it = v;
+                        break;
+                    case 96:
+                    case 103:
+                    case 105:
+                        rv.it = parseFloat(v);
+                        break;
+                    default: if ('number' === typeof rv.it) {
+                        rv._[v] = rv.it;
+                    }
+                    else if ('string' === typeof rv.it) {
+                        rv.__[v] = rv.it;
+                    }
+                    else if (rv.it === null) { }
+                    //        else if ('null' === (typeof (rv.it))) {}
+                    else
+                        throw 'Not at 138 on 20250423 at 2343';
+                }
             return rv;
         };
         const decomposer = (it) => {
@@ -196,6 +220,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             const il = it.length;
             const sa__ = decompose(it), sj = sa__.join(''), sl = sj.length;
             //console.log("\n" + it.length + it + "\" -> " + JSON.stringify(sa) + " # = " + sl);
+            if (sl === il || !atPlay()) { }
+            else
+                throw 'Not at 121 on 20250422 at 1732'; // TODO?= better (ideally)
             const a = sa__.filter(decofilter);
             const t = a.map(decomapping);
             //  a.forEach(f_out, t);
