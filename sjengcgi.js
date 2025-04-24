@@ -146,7 +146,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             let il = it.length, rv = NaN;
             if (il) {
                 const cz = it.charCodeAt(--il); // NB: throws are somewhat inconsistent wrt length:-
-                if (cz === 45 || cz === 32
+                if (cz === 45 || cz === 32 // TODO= USE; LOSE= '@'
                     || cz === 64 // What about using 37, anyway?  SP would be best, I suppose?  Tricky one.
                 ) { }
                 else
@@ -174,13 +174,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             a;
             const t = t_[i];
             if (veracity) {
-                const ptv = t & 1;
+                const ptv = !(t & 1);
                 if (t === 190)
                     rv.it = v;
                 else if ((t - 96 >> 0) < 20) {
                     const nat = parseFloat(v);
                     rv.it = ptv ? 0 - nat : nat;
                 }
+                else if (t !== 95) { }
                 else if ('number' === typeof rv.it) {
                     rv._[v] = rv.it;
                 }
