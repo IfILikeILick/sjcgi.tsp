@@ -177,7 +177,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 const ptv = t & 1;
                 if (t === 190)
                     rv.it = v;
-                else if ((t - 48 >> 0) < 20) {
+                else if ((t - 96 >> 0) < 20) {
                     const nat = parseFloat(v);
                     rv.it = ptv ? 0 - nat : nat;
                 }
