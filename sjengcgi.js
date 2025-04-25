@@ -32,7 +32,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         ) => (it_, idx) => {
             const syms = pref + '△▲○hn●fu□■ck⚐⚑♡♥◇◆itbrokesomehow_•_±×◎↑↓☖☗';
             if (veracity) { }
-            else if ((twice >>= 1) === 0) { }
+            else if ((twice >>>= 1) === 0) { }
             else {
                 console.log(syms);
             }
@@ -40,8 +40,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             if (idx + 7 >>> 3 ^ 1)
                 return it;
             const alph = (((idx + idy & 1 ? ' ' : '-') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32)) & 127;
-            const alph2 = alph >> 5, alph5 = alph & 31;
-            const sym = syms.charAt(alph2 >> 1 ? (alph & 3 ? alph5 & 30 : 0) + alph2 : alph5 & 1);
+            const alph2 = alph >>> 5, alph5 = alph & 31;
+            const sym = syms.charAt(alph2 >>> 1 ? (alph & 3 ? alph5 & 30 : 0) + alph2 : alph5 & 1);
             // console.log("It's a '"+sym+"': "+it_);
             return sym;
         };
@@ -68,7 +68,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else
                     return beta;
                 const gamma = beta.split('\n');
-                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0) + 7 << 3 || 0) / 7 >> 3 ^ 8;
+                const unrotated = (gamma[gamma.length - 9].trim().charCodeAt(0) + 7 << 3 || 0) / 7 >>> 3 ^ 8;
                 const reply = gamma[gamma.length - 10].trim() || null;
                 if (unrotated < 2 && reply && reply.length >>> 1 === 2) { }
                 else
@@ -132,13 +132,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const decomposing = (it) => {
             let q = 0;
             for (let p = -1;;) {
-                const c = it.charCodeAt(++p) /**\ || 0 /**/;
+                const c = it.charCodeAt(++p) /**\ || 0 /**/; /* TODO= PICK 0 or NaN */
                 if (c !== 45 || p) {
                     q = c << 1 | p;
                     break;
                 }
             }
-            return q;
+            return q; // NB: The string itself is preserved (so, any leading hyphen remains in place)
         };
         const decomapping = (it, at, sa) => {
             at;
@@ -173,22 +173,35 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const f_in_ = (t_) => (rv, v, i, a) => {
             a;
             const t = t_[i];
+            if (!veracity) { }
+            else {
+                let out_;
+                const S = 1, C = 0, U = undefined, N = null;
+                S;
+                C;
+                if ((N >>> 0 & 1) >= 0) { }
+                else {
+                    throw 'Nope';
+                }
+                if ((U >>> 0 & 1) >= 0) { }
+                else {
+                    throw 'Nope';
+                }
+                //throw 'OK';
+            }
             if (veracity) {
-                const ptv = (t >>> 0 & 1) !== 0;
+                const pre = t >>> 0 & 1;
                 if (t === 190)
                     rv.it = v;
-                else if ((t - 96 >> 0) < 20) {
-                    const nat = parseFloat(v);
-                    rv.it = ptv ? 0 - nat : nat;
-                }
+                else if ((t - 96 >>> 0) < 20 || t === 91)
+                    rv.it = 0 - parseFloat(v);
                 else if (t !== 191
                     || v.length < 2) { }
                 else if ('number' === typeof rv.it) {
-                    rv._[v
-                        .substring(1)] = rv.it;
+                    rv._[v.substring(pre)] = rv.it;
                 }
                 else if ('string' === typeof rv.it) {
-                    rv.__[v] = rv.it;
+                    rv.__['$' + v.substring(pre)] = rv.it;
                 }
                 else if (rv.it === null) { }
                 //       else if ('null' === (typeof (rv.it))) {}
@@ -234,8 +247,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             return rv;
         };
         const patches = ''
-            + 'HALVE' + 'HHUFF'
-            + 'HH42' + 'H032' + 'HH3Q2808'
+            + 'HALVE' + 'HH42' // +42
+            + 'HHUFF' + 'H032' // -32
+            //+ 'HULCE' + 'HH55' // -32 // TODO?= FIX or REPORT= not a string (which it isn't!)
+            + 'HHOPE' + 'HH3Q2808' // +3...
             + 'HUQxyUQUQU' + 'HUQyzUQUQU' + 'HUQxyzUQUQU';
         const patch4decomposer = ('/' + patches + '/')
             .replace(/Q/g, '.').replace(/U/g, '_').replace(/H/g, '-');
