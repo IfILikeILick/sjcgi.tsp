@@ -26,21 +26,71 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         ;
         const globje = (() => { }).constructor('return this;')();
         /*\ \**/ /**\ \**/ /**\ \**/
+        ;
+        const makePieces = (overrides, prefix = '_') => {
+            const qf = (s, n /**/) => {
+                {
+                    const c = s.charCodeAt(0) & 31, x = c ^ (c & 3 ? c & 1 : 16);
+                    //const z= 0o3257107746>>>((c>>1)*3-(c&3? 0: 24)) & 7;
+                    const y = (0o4360210057 >>> x + (x >> 1) & 7) - 1;
+                    n = n !== null && n !== void 0 ? n : null;
+                    if ('object' !== typeof n) {
+                        if (y === n) { }
+                        else {
+                            console.error("Synth'd " + y + ' not ' + n); /**\ throw 'OOPS'; /**/
+                        }
+                    }
+                    else {
+                        n = y;
+                    }
+                }
+                const twin = overrides[prefix + s] || (n ? (n + 9811) * 100001 + 6 : 16000183); // TODO= NBSP II
+                return String.fromCharCode(twin / 100000) + String.fromCharCode(twin % 100000);
+            };
+            return qf; // PRO TEM
+        };
+        //;type mP_t_out= typeof (makePieces({}));
+        const haveFun = (k = 'ohnodratitbrokesomehowwhatadamnedshame') => {
+            let s = k, q = k, c = 18;
+            for (let v = 0 - 503161950 >>> 1; v; v >>>= 5) {
+                const p = String.fromCharCode(c + 64) + String.fromCharCode(c + 96) + s;
+                const b = c & 30, e = v & 31, d = e + 2 & 30 /**\, d= b-(b&6? 0: 32) /**/;
+                const t = k.slice(d, b);
+
+                q = p + q;
+                s = t; // k.slice(e+2, b);
+                c = e;
+            }
+            return q;
+        };
+        function toLose(overrides, ..._) {
+            const f = makePieces(overrides);
+            /*
+            if (veracity) {} else /**/ return haveFun() + '\n' /**\
+            
+              return '' /**/
+                + f('x', 0) + '' + f('p', 6) + '' + f('b', 4) + 'ohnofu'
+                + f('k', 1) + 'ck'
+                + f('n', 5) + '' + f('q', 2) + '' + f('r', 3) + 'itbrokesomehow';
+        }
+        const charCodes = (s) => ('FINALLY:-\n'
+            // + s.split('').map( (c)=>('x 0x'+c.charCodeAt(0).toString(16)) ).join()
+            + '\n' + toLose({}, s));
         // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
         ) => (idy // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
         ) => (it_, idx) => {
             const syms = pref + '△▲○hn●fu□■ck⚐⚑♡♥◇◆itbrokesomehow_•_±×◎↑↓☖☗';
-            if (veracity) { }
+            if (!!!veracity) { }
             else if ((twice >>>= 1) === 0) { }
             else {
-                console.log(syms);
+                console.log(charCodes(syms));
             }
             const it = it_.trim();
             if (idx + 7 >>> 3 ^ 1)
-                return it;
+                return it; // 1..8 only
             const alph = (((idx + idy & 1 ? ' ' : '-') + it).slice(-1).charCodeAt(0) + (it.length !== 2 ? 0 : 32)) & 127;
-            const alph2 = alph >>> 5, alph5 = alph & 31;
+            const alph2 = alph >>> 5, alph5 = alph & 31; // 1..3 <=> sq, wh, bl;  whsq, blsq <=> 32, 45; etc; etc
             const sym = syms.charAt(alph2 >>> 1 ? (alph & 3 ? alph5 & 30 : 0) + alph2 : alph5 & 1);
             // console.log("It's a '"+sym+"': "+it_);
             return sym;
@@ -48,11 +98,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const a_square = the_squares_(' ·○●'); // TODO= '◎' and NBSP
         const o_square = the_squares_(' ·↓↑');
         const e_square = the_squares_(' ·↑↓');
+        a_square(0)('', 0);
         const a_rank = (unrotated) => (it, idy) => {
             const the_squares = unrotated ? e_square : o_square;
             a_square;
             const the_square = !!falsity ? the_squares : a_square;
-            return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;');
+            return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;'); // TODO= NBSPs
         };
         /*\ \**/ /**\ \**/
         function dostAsyncly(elem, field, what, move) {
@@ -175,7 +226,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             const t = t_[i];
             if (!veracity) { }
             else {
-                let out_;
+                //let out_ :boolean;
                 const S = 1, C = 0, U = undefined, N = null;
                 S;
                 C;
@@ -209,26 +260,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     throw 'Not at 138 on 20250423 at 2343';
             }
             else
-                switch (t) { // TODO= LOSE= switch; x*10**y; etc etc
-                    case 190:
-                        rv.it = v;
-                        break;
-                    case 96:
-                    case 103:
-                    case 105:
-                        rv.it = parseFloat(v);
-                        break;
-                    default: if ('number' === typeof rv.it) {
-                        rv._[v] = rv.it;
-                    }
-                    else if ('string' === typeof rv.it) {
-                        rv.__[v] = rv.it;
-                    }
-                    else if (rv.it === null) { }
-                    //        else if ('null' === (typeof (rv.it))) {}
-                    else
-                        throw 'Not at 138 on 20250423 at 2343';
-                }
+                switch (0) {
+                } // TODO= LOSE tests, above
             return rv;
         };
         const decomposer = (it) => {
