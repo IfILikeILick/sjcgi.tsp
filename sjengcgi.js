@@ -28,6 +28,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     const set_timeout = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
     set_timeout(0)(() => {
         //
+        set_timeout(101)(() => {
+            const goaw = globje;
+            const gdoc = goaw.document;
+            // Get a typed reference to the document on our globje:
+            //const documentObj = (globje as Window).document;
+            //const documentObj = (globje).document;
+            // Retrieve the paragraph element by its id:
+            const para1 = gdoc.getElementById("para1");
+            // Update the font size if the element exists:
+            if (para1) {
+                para1.style.fontSize = "300%"; // or any size string that you require
+            }
+        });
         //;interface Obje { [key :string] :any; };
         //const globje= ( ()=>{} ).constructor('return this;')() as Obje;
         /*\ \**/ /**\ \**/ /**\ \**/
