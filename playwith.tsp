@@ -47,7 +47,7 @@ const decomapping= (it :string, at :number, sa :string[])=> { at; sa;
                                     else throw 'Not at 111 on 20250422 at 2241';
     rv= decomposing(it);
     it= it.substring(rv!==190? 0: 2, il); // *can* yield an empty string, ie not throw
-    sa[at]= it+'#'+rv;
+    sa[at]= it /**\ + '#' + rv /**/ ;
   }
   return rv;
 };/**\
@@ -119,18 +119,12 @@ const patches= ''
 const patch4decomposer= ('/'+patches+'/')
                         .replace(/Q/g, '.').replace(/U/g, '_').replace(/H/g, '-');
 
-
-
-const decomposer_patch= (path :string) :eo_t_=>{ if (falsity) return 'No stobje!' as unknown as eo_t_; else {
-  const it = decomposer(
-    
-    
-path!=="/play/"? path: patch4decomposer);
-
-
+const decomposer_patch= (path :string) :eo_t_=>{
+  if (falsity) return 'No stobje!' as unknown as eo_t_; else {
+  const it = decomposer(path!=="/play/"? path: patch4decomposer); // TODO?= USE= atPlay()
 //  const it :stobje_t_= it_; stobje= it;
   stobje._= it._;  stobje.__= it.__;
-  return it;
+  return it; // is infelicitous, but WTH
 }};
 
 (((path :string)=>{ const it= decomposer_patch(path);
@@ -146,15 +140,10 @@ if (atPlay()) {} else
 set_timeout(666)(()=>{ const goaw= globje as Window;
                        const gdoc= goaw.document;
   const para1= gdoc.getElementById("para1") as HTMLParagraphElement | null;
-  const percent= (stobje._ as
+  const percent= (stobje._ as AssociativeArray<number> // TODO= MOVE ie NOT here FFS
+                 )['_z'] || 222;
 
-
-AssociativeArray<number>
-
-
-                 )['_lOl'] || 300;
-
-  if (!para1) { } else { ; para1.style.fontSize= ''+percent+'%'; }
+  if (!para1) { ; /**/ } else { ; para1.style.fontSize= ''+percent+'%'; }
                      }); // END inner timeout
 
  /*\ \**/ /**\ \**/ /**\ \**/
@@ -205,7 +194,8 @@ if (veracity) {} else /**/ return haveFun() + '\n' /**\
 }
 
 const charCodes= (s :string)=> ( 'FINALLY:-\n'
-  + s.split('').map( (c)=>('x 0x'+c.charCodeAt(0).toString(16)) ).join()
+//+ s.split('').filter( (c)=>(c.charCodeAt(0)-97)>>>0>=26 ).map( (c)=>('x0x'+c.charCodeAt(0).toString(16)) ).join()
+  + s.split('').filter( (c)=>(c.charCodeAt(0)-97)>>>0>=26 ).map( (c)=>(c+c.charCodeAt(0).toString(10)) ).join()
   + '\n' + toLose({}, s)
 );
 

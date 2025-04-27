@@ -66,7 +66,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     throw 'Not at 111 on 20250422 at 2241';
                 rv = decomposing(it);
                 it = it.substring(rv !== 190 ? 0 : 2, il); // *can* yield an empty string, ie not throw
-                sa[at] = it /**\ + '#' + rv /**/ ;
+                sa[at] = it /**\ + '#' + rv /**/;
             }
             return rv;
         }; /**\
@@ -151,11 +151,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             if (falsity)
                 return 'No stobje!';
             else {
-                const it = decomposer(path !== "/play/" ? path : patch4decomposer);
+                const it = decomposer(path !== "/play/" ? path : patch4decomposer); // TODO?= USE= atPlay()
                 //  const it :stobje_t_= it_; stobje= it;
                 stobje._ = it._;
                 stobje.__ = it.__;
-                return it;
+                return it; // is infelicitous, but WTH
             }
         };
         (((path) => {
@@ -172,8 +172,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 const goaw = globje;
                 const gdoc = goaw.document;
                 const para1 = gdoc.getElementById("para1");
-                const percent = stobje._['_lOl'] || 300;
-                if (!para1) { }
+                const percent = stobje._ // TODO= MOVE ie NOT here FFS
+                ['_z'] || 222;
+                if (!para1) {
+                    ; /**/
+                }
                 else {
                     ;
                     para1.style.fontSize = '' + percent + '%';
@@ -230,7 +233,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 + f('n', 5) + '' + f('q', 2) + '' + f('r', 3) + 'itbrokesomehow';
         }
         const charCodes = (s) => ('FINALLY:-\n'
-            + s.split('').map((c) => ('x 0x' + c.charCodeAt(0).toString(16))).join()
+            //+ s.split('').filter( (c)=>(c.charCodeAt(0)-97)>>>0>=26 ).map( (c)=>('x0x'+c.charCodeAt(0).toString(16)) ).join()
+            + s.split('').filter((c) => (c.charCodeAt(0) - 97) >>> 0 >= 26).map((c) => (c + c.charCodeAt(0).toString(10))).join()
             + '\n' + toLose({}, s));
         // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
