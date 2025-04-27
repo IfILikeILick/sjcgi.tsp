@@ -12,9 +12,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 //
 /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
 //
-((() => {
+(((globje_) => {
     let game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
-    //
+    const globje = globje_();
+    globje;
+    const stobje = { _: {}, __: {}, };
+    stobje; // TODO= FIX= types
+    ;
+    ;
+    ;
     const veracity = true;
     const falsity = false;
     veracity;
@@ -22,10 +28,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     const set_timeout = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
     set_timeout(0)(() => {
         //
-        ;
-        ;
-        const globje = (() => { }).constructor('return this;')();
+        //;interface Obje { [key :string] :any; };
+        //const globje= ( ()=>{} ).constructor('return this;')() as Obje;
         /*\ \**/ /**\ \**/ /**\ \**/
+        ;
         ;
         const makePieces = (overrides, prefix = '_') => {
             const qf = (s, n /**/) => {
@@ -54,11 +60,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             let s = k, q = k, c = 18;
             for (let v = 0 - 503161950 >>> 1; v; v >>>= 5) {
                 const p = String.fromCharCode(c + 64) + String.fromCharCode(c + 96) + s;
-                const b = c & 30, e = v & 31, d = e + 2 & 30 /**\, d= b-(b&6? 0: 32) /**/;
-                const t = k.slice(d, b);
-
+                const b = c & 30, e = v & 31, d = e + 2 & 30;
+                const t = k.slice(d, b); /*         console.log(
+                    (p+':   ').slice(0, 6) + (p.length>5? '[..]: (': '      (') + (' '+c).slice(-2)
+                  + '); next, ' + (e&30) + ' to ' + b + ' needs ' + t.length + '. '); /**/
                 q = p + q;
-                s = t; // k.slice(e+2, b);
+                s = t;
                 c = e;
             }
             return q;
@@ -74,7 +81,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 + f('n', 5) + '' + f('q', 2) + '' + f('r', 3) + 'itbrokesomehow';
         }
         const charCodes = (s) => ('FINALLY:-\n'
-            // + s.split('').map( (c)=>('x 0x'+c.charCodeAt(0).toString(16)) ).join()
+            + s.split('').map((c) => ('x 0x' + c.charCodeAt(0).toString(16))).join()
             + '\n' + toLose({}, s));
         // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
         const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
@@ -166,12 +173,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         } // typecheck
         globje['dostSyncly'] = dostSyncly;
         //
-    });
+    }); // END 0ms
     set_timeout(666)(() => {
         //
         var _a;
-        function atPlay() { return (location.pathname) === '/play/'; }
-        atPlay;
+        function atPlay() { return (location.pathname) === '/play/'; } // atPlay;
         const decomposure = /(?:\/-?@?|-?\d+(?:\.\d+)?[-@]|-?[A-Za-z]\w*[-@]|-_\w*[-@]|_[-\.].*?_\._[-@])/g;
         const decompose = (it, NO = '#NONONO:-') => (it.match(decomposure) || [NO + it]);
         const precomposer = (it) => ('/' + ((it || '') + '/').replace(/\//g, '@/'));
@@ -215,6 +221,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const f_out= function (this :number[], v :string, i :number, a :string[]) :void { v; a;
           const t= this[i]; t;
         };/**/
+        ;
         const emptyobj = () => {
             const n = {};
             const s = {};
@@ -247,7 +254,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else if ((t - 96 >>> 0) < 20 || t === 91)
                     rv.it = 0 - parseFloat(v);
                 else if (t !== 191
-                    || v.length < 2) { }
+                    || v.length < 2 // TODO= LOSE
+                ) { }
                 else if ('number' === typeof rv.it) {
                     rv._[v.substring(pre)] = rv.it;
                 }
@@ -255,7 +263,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     rv.__['$' + v.substring(pre)] = rv.it;
                 }
                 else if (rv.it === null) { }
-                //       else if ('null' === (typeof (rv.it))) {}
+                //       else if ('object' === (typeof (rv.it))) {}
                 else
                     throw 'Not at 138 on 20250423 at 2343';
             }
@@ -287,19 +295,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             + 'HUQxyUQUQU' + 'HUQyzUQUQU' + 'HUQxyzUQUQU';
         const patch4decomposer = ('/' + patches + '/')
             .replace(/Q/g, '.').replace(/U/g, '_').replace(/H/g, '-');
-        const decomposer_patch = (it) => {
+        const decomposer_patch = (path) => {
             if (falsity)
-                return 'OUTOUTOUT';
-            else
-                return JSON.stringify(decomposer(it !== "/play/" ? it : patch4decomposer));
+                return 'No stobje!';
+            else {
+                const it = decomposer(path !== "/play/" ? path : patch4decomposer);
+                //  const it :stobje_t_= it_; stobje= it;
+                stobje._ = it._;
+                stobje.__ = it.__;
+                return JSON.stringify(it);
+            }
         };
         console.log("It's "
             + ((_a = (() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4')) !== null && _a !== void 0 ? _a : '\"' + decomposer_patch(location.pathname) + '\"'));
         //
-    });
+    }); // END 666ms
     //
-})());
+})((() => { }).constructor('return this;')
+// FROM:= const globje= ( ()=>{} ).constructor('return this;')() as Obje;
+));
 //
 /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
 //
+;
 ;
