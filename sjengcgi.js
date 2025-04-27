@@ -66,7 +66,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     throw 'Not at 111 on 20250422 at 2241';
                 rv = decomposing(it);
                 it = it.substring(rv !== 190 ? 0 : 2, il); // *can* yield an empty string, ie not throw
-                sa[at] = it + '#' + rv;
+                sa[at] = it /**\ + '#' + rv /**/ ;
             }
             return rv;
         }; /**\
