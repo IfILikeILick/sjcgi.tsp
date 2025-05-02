@@ -14,7 +14,8 @@
     veracity;
     falsity;
     function atPlay() { return (pathname) === '/play/'; } // atPlay;
-    const set_timeout = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
+    const set_timeout = (ms) => (fn, ...args // TODO= RESEARCH
+    ) => setTimeout(fn, ms, ...args);
     //
     set_timeout(0)(() => {
         //
@@ -75,6 +76,8 @@
             const f_out= function (this :number[], v :string, i :number, a :string[]) :void { v; a;
               const t= this[i]; t;
             };/**/
+            ;
+            ;
             ;
             const emptyobj = () => {
                 const n = {};
@@ -175,6 +178,7 @@
              (((idealName, libToAdd) => {
                 ;
                 ;
+                ;
                 const globje = (() => { }).constructor('return this;')();
                 if (globje['NO_' + idealName]) { }
                 else {
@@ -204,26 +208,84 @@
         _._._._._._._._._._._._._._._._;
         ((($) => {
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
-            const stillBest = (best, test) => ((b, t, d) => (d < 0 || !d && b < t))(best, test, test.length - best.length) ? best : test;
-            const myName___ = (name, obje = globje) => Object.keys(obje)
+            const theBest = (best, test) => ((b, t, d) => (d < 0 || !d && b < t))(best, test, test.length - best.length) ? best : test;
+            const aName__ = (name, obje = globje) => Object.keys(obje)
                 .filter((key) => 1 + key.search(new RegExp(name + '[$_]*')))
-                .reduce(stillBest);
-            const myName__ = (genus, obje = globje) => (species) => myName___(genus + '_' + species, obje);
-            const myName_ = myName__('NML11th');
-            const myName = myName_('LithePath');
+                .reduce(theBest);
+            const aName_ = (genus, obje = globje) => (species) => aName__(genus + '_' + species, obje);
+            const aName = aName_('NML11th');
+            //const myName= myName_('LithePath');
             if (!always) { }
             else
                 console.log('\n'
-                    + JSON.stringify(myName) + '\n'
+                    + JSON.stringify(aName('LithePath')) + '\n'
                     + JSON.stringify($) + '\n'
                     + JSON.stringify($.pathObje()) + '\n');
+            //for (let i= 44, j= 1; --i; ) console.log(''+(j= (j>>>0<<1>>>0|j>>>1)));
+            //for (let i= 4, j= 1; --i; ) console.log(''+(j= (j>>>0<<1>>>0|j>>>1)>>>0));
+            //for (let i= 44, j= 0; --i; ) console.log(''+(j= ((j<<1>>>0|1)>>>0)+(j>>>1)));
+            ((() => {
+                const throwNaN = (whether // TODO= PICK= always throw?????
+                ) => (it) => {
+                    if (!whether) { }
+                    else
+                        throw 'NaN/risk on 20250430 at 2005';
+                    return it !== null && it !== void 0 ? it : NaN;
+                };
+                const NaN_ = throwNaN(false);
+                NaN_;
+                const us01526Factory = (sh) => {
+                    const k = sh & 31; // or 31 if need >25 days(!)
+                    return (it) => ((it += (it >>> k | 1) >>> 0) < (-1 >>> 0) ? it : NaN_());
+                };
+                const strive = (dost, latest4species, ms16_, globje_ = globje) => (get_) => {
+                    let ms16 = 0;
+                    const f = (g) => () => {
+                        const got = latest4species(get_);
+                        console.log('Loaded ' + got + ' after ' + (ms16 >> 16) + 'ms');
+                        if (got)
+                            dost(globje_[got]);
+                        else
+                            set_timeout((ms16 = ms16_(ms16)) >> 16)(g(g));
+                    };
+                    const ff = f(f);
+                    ff();
+                };
+                /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+                function go(it) {
+                    const g = us01526Factory(it);
+                    let i, j = 0;
+                    const k = 999999;
+                    let t = 0;
+                    for (i = k; !!(j = g(j)) && --i;)
+                        t += j >>> 16;
+                    if (i) { }
+                    else if (falsity)
+                        throw 'Excessive iter.';
+                    else
+                        return +Infinity;
+                    return /**/ (t / 60 >>> 0) / 1000.0; /*/ k-i /**/
+                    ;
+                }
+                //  console.log('#1= '+((()=>{ const n= -1, p= n>>>1; return n>>>0|p; })()));
+                console.log('#2=..' + ((() => {
+                    let rv = '';
+                    for (let i = 19; --i >= 0;)
+                        rv += ', ' + i + ': ' + go(i);
+                    return rv;
+                })()));
+                function st(it) {
+                    console.log(JSON.stringify(it.pathObje()));
+                }
+                strive(st, aName, us01526Factory(3))('LithePath');
+            })());
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             if (!!always) { }
             else // IIFE
                 (((test) => {
                     const _ = undefined;
                     _;
-                    console.log("It's " + test);
+                    console.log("It's a " + test);
                 })('test'));
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             /*  END vectors  */ _._._._._._._._._._._._._._._._._._._;
