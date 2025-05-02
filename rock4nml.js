@@ -33,7 +33,7 @@
             const theBest = (best, test) => ((b, t, d) => (d < 0 || !d && b < t))(best, test, test.length - best.length) ? best : test;
             const theName = (name, obje = globje) => Object.keys(obje)
                 .filter((key) => 1 + key.search(new RegExp(name + '[$_]*')))
-                .reduce(theBest);
+                .reduce(theBest, '');
             const gloName = (genus, obje = globje) => (species) => theName(genus + '_' + species, obje);
             const nmlName = gloName('NML11th');
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
