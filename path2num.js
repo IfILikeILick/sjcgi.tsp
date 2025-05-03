@@ -211,7 +211,7 @@
             const theBest = (best, test) => ((b, t, d) => (d < 0 || !d && b < t))(best, test, test.length - best.length) ? best : test;
             const aName__ = (name, obje = globje) => Object.keys(obje)
                 .filter((key) => 1 + key.search(new RegExp(name + '[$_]*')))
-                .reduce(theBest);
+                .reduce(theBest, '');
             const aName_ = (genus, obje = globje) => (species) => aName__(genus + '_' + species, obje);
             const aName = aName_('NML11th');
             //const myName= myName_('LithePath');

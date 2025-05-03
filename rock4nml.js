@@ -1,6 +1,24 @@
 "use strict";
 ;
 ;
+//
+/**\
+//;type safe_setTimeout_t_= ()=>number;
+//;type any_timeout_t_= typeof setTimeout;
+//const not_timeout :typeof setTimeout= (fn :((...out :any[])=>void) | string,
+//                                                  _ :number, ...args :any[]
+//                      )=>{ if ('string' !== typeof fn) fn(...args);
+//                           return NaN; }
+const cut_timeout= (fn :(...out :any[])=>void, ...args :any[]
+               )=> fn(...args);
+const syncSetTimeout: typeof setTimeout= (func, _, ...args)=> {
+ if (typeof func !== "string") func(...args); else throw 'No eval() here';
+ return NaN;
+};
+     const not_timeout= (fn :settable_t_, ...args :any[] // TODO?= ?
+                     )=> notTimeout(fn, NaN, ...args);
+/**/
+//
 (((globje_) => {
     const globje = globje_();
     globje;
@@ -11,11 +29,26 @@
     falsity;
     function atPlay() { return (pathname) === '/play/'; }
     ;
-    atPlay;
-    const set_timeout = (ms) => (fn, ...args // TODO= RESEARCH
-    ) => setTimeout(fn, ms, ...args);
+    atPlay; /*
+    const set_timeout_out= (ms :number
+                        )=>(fn :(...out :any[])=>void, ...args :any[]
+                        )=> setTimeout(fn, ms, ...args); set_timeout_out;/**/
+    ;
+    ;
+    const notTimeout = (setfn, rv, ...args) => (setfn(...args),
+        (rv !== null && rv !== void 0 ? rv : NaN));
+    const has_timeout = (may, ms) => (setfn, ...args // TODO?= ?
+    ) => may(setfn, ms, ...args);
+    const not_timeout /**/ /**/ = (_, __) => {
+        //if (veracity) throw 'Not at 51 on 20250503 at 0046'; // TODO= better
+        return undefined;
+    };
+    const may_timeout = (ms) => has_timeout('number' === typeof ms && !Number.isNaN(ms) ? setTimeout : notTimeout, ms !== null && ms !== void 0 ? ms : NaN);
+    const set_timeout /**/ /**/ = (ms) => ('number' === typeof ms && !Number.isNaN(ms) ?
+        has_timeout :
+        not_timeout)(setTimeout, ms);
     //
-    set_timeout(0)(() => {
+    may_timeout(null)(() => {
         //
         ;
         ;
@@ -73,7 +106,7 @@
             const toExport = // IIFE
              ((() => {
                 return {
-                    atPlay, set_timeout, gloName, nmlName, waitFor, theLava,
+                    atPlay, may_timeout, set_timeout, gloName, nmlName, waitFor, theLava,
                 };
             })());
             const addedLib = // IIFE
