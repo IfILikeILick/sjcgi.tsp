@@ -1,24 +1,6 @@
 "use strict";
 ;
 ;
-//
-/**\
-//;type safe_setTimeout_t_= ()=>number;
-//;type any_timeout_t_= typeof setTimeout;
-//const not_timeout :typeof setTimeout= (fn :((...out :any[])=>void) | string,
-//                                                  _ :number, ...args :any[]
-//                      )=>{ if ('string' !== typeof fn) fn(...args);
-//                           return NaN; }
-const cut_timeout= (fn :(...out :any[])=>void, ...args :any[]
-               )=> fn(...args);
-const syncSetTimeout: typeof setTimeout= (func, _, ...args)=> {
- if (typeof func !== "string") func(...args); else throw 'No eval() here';
- return NaN;
-};
-     const not_timeout= (fn :settable_t_, ...args :any[] // TODO?= ?
-                     )=> notTimeout(fn, NaN, ...args);
-/**/
-//
 (((globje_) => {
     const globje = globje_();
     globje;
@@ -87,11 +69,13 @@ const syncSetTimeout: typeof setTimeout= (func, _, ...args)=> {
                 let ms16 = 0;
                 const f = (g) => () => {
                     const got = latest4species(get_);
-                    console.log('Loaded ' + got + ' after ' + (ms16 >> 16) + 'ms');
+                    console.log('Loaded ' + got + ' after ' + (ms16 >>> 16) + 'ms');
                     if (got)
                         dost(globje_[got]);
+                    else if (Number.isNaN(ms16))
+                        console.warn('NaN');
                     else
-                        set_timeout((ms16 = ms16_(ms16)) >> 16)(g(g));
+                        set_timeout((ms16 = ms16_(ms16)) >>> 16)(g(g));
                 };
                 const ff = f(f);
                 ff();
@@ -172,10 +156,12 @@ const syncSetTimeout: typeof setTimeout= (func, _, ...args)=> {
                         rv += ', ' + i + ': ' + dur(i);
                     return rv;
                 })()));
-                function st(it) {
-                    console.log(JSON.stringify(it.theLava.throwNaN(true)()));
-                }
-                $.waitFor(st, $.nmlName, $$._15ns26sequence(3))('LitheRock'); // TODO?= Path?
+                const something2Do = (doMore = false) => (it) => {
+                    /**\if (doMore) ( $.waitFor(something2Do(), $.nmlName, $$._15ns26sequence(1)) )
+                                                                                     ('LithePath');
+                    /**/ console.log(JSON.stringify(it.theLava.throwNaN(true)()));
+                };
+                $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock');
             })());
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             if (!!always) { }
