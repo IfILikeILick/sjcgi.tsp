@@ -64,15 +64,36 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     const at = thingsToWaitFor[what];
                     const it = thingsToWaitFor[--what];
                     const to = thingWaitedBefore(what);
+                    const link = (s = at, o = obj) => {
+                        if (s) { }
+                        else
+                            throw 'Not at 59';
+                        allLoaded[s] = o;
+                        console.warn(s + ' seems OK?');
+                        return s;
+                    };
                     if (!at) { }
                     else
-                        switch (at) {
+                        switch (link()) {
                             case 'LitheRock':
                                 $ = obj;
                                 $$ = obj.theLava;
-                            default:
-                                allLoaded[at] = obj;
-                                console.warn(at + ' seems OK?');
+                                break;
+                            case 'LithePath':
+                                {
+                                    const path_lib = obj;
+                                    if (path_lib) { }
+                                    else
+                                        throw 'Not loaded';
+                                    const path_obj = path_lib['pathObje']();
+                                    if (path_obj) { }
+                                    else
+                                        throw 'Not found';
+                                    stobje._ = path_obj['_'];
+                                    console.warn('_ IS ' + JSON.stringify(stobje._));
+                                    stobje.__ = path_obj['__'];
+                                }
+                                break;
                         }
                     if (!it) { }
                     else
@@ -94,8 +115,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 if (path_obj) { }
                 else
                     throw 'Not found';
-                stobje._ = path_obj['_'];
-                console.log('_ IS ' + JSON.stringify(stobje._));
+                // stobje._= path_obj['_']; // console.log('_ IS ' + JSON.stringify(path_obj['_']));
+                console.log('At 91 _ IS ' + JSON.stringify(path_obj['_']));
                 stobje.__ = path_obj['__'];
             })());
             /*\ \**/ /**\ \**/ /**\ \**/

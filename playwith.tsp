@@ -19,134 +19,91 @@
                         )=>(fn :(d :any)=>any, ...args :any[]
                         )=> setTimeout(fn, ms, ...args);
 //
-            set_timeout(0)(()=>{ // unnecessary //// TODO= LOSE= 'NONONO', nextish
+/**\  const
+      stillBest= (best :string, test :string
+              )=> (    (b :string, t :string, d: number
+                    )=> (d<0 || !d && b<t)
+                  )        (best, test, test.length - best.length)? best: test;
+      const
+      myName___= (name :string, obje= globje
+              )=> Object.keys(obje)
+                        .filter((key)=> 1+key.search(new RegExp(name+'[$_]*')))
+                        .reduce(stillBest, ''); // TODO= LOOP via set_timeout()
+      const
+      myName__= (genus :string, obje= globje
+             )=>(species :string
+             )=> myName___(genus + '_' + species, obje);
+      const
+      myName_= myName__('NML11th'),
+      myName= myName_('LithePath'); myName; /**/
 //
+if (falsity) {} else
+            set_timeout(666)(()=>{ // unnecessary
+//
+ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
 
-const decomposure= /(?:\/-?@?|-?\d+(?:\.\d+)?[-@]|-?[A-Za-z]\w*[-@]|-_\w*[-@]|_[-\.].*?_\._[-@])/g;
-const decompose= (it :string, NO= '#NONONO:-') :RegExpMatchArray=> (it.match(decomposure) || [NO+it]);
-const precomposer= (it :string) :string=> ('/' + ((it||'')+'/').replace(/\//g, '@/'));
-const decofilter= (it :string, at :number, sa :string[]) :boolean => { at; sa; // discard "/..."
-  return it.charCodeAt(0) !== 47;
+const allLoaded :{ [key :string] :{ [key :string] :any; }; }= {};
+
+((()=>{ let $ :{ [key :string] :Function; }, $$ :{ [key :string] :Function; };
+  const rock_lub= globje['NML11th_LitheRock'] as { [key :string] :any; };
+  $= rock_lub; $$= rock_lub.theLava;
+  const wait4= (it :string, to :Function, waits_= 1
+            )=> ( $.waitFor(to, $.nmlName, $$._15ns26sequence(waits_)) )(it);
+  const thingsToWaitFor= [ '', 'LithePath', 'LitheRock', '' ]; const al= thingsToWaitFor.length-1;
+  const thingWaitedBefore= (what :number, wait= 1)=>(obj :AssociativeArray<any>)=>{
+    const at= thingsToWaitFor[what];
+    const it= thingsToWaitFor[--what];
+    const to= thingWaitedBefore(what);
+const link= (s= at, o= obj)=>{
+  if (s) {} else throw 'Not at 59';
+  allLoaded[s]= o;
+  console.warn(s + ' seems OK?');
+  return s;
 };
-const decomposing= (it :string) :number=>{ // return the type-number of the substring
-  let q= 0;
-  for (let p= -1;;) { const c= it.charCodeAt(++p) /**\ || 0 /**/ ; /* TODO= PICK 0 or NaN */
-                      if (c!==45||p) { q= c<<1|p; break; } }
-  return q; // NB: The string itself is preserved (so, any leading hyphen remains in place)
-};
-const decomapping= (it :string, at :number, sa :string[])=> { at; sa;
-  let il= it.length, rv= NaN;
-  if (il) {
-    const cz= it.charCodeAt(--il); // NB: throws are somewhat inconsistent wrt length:-
-    if (cz === 45 || cz === 32     // TODO= USE; LOSE= '@'
+if (!at) {} else switch (link()) {
+  case 'LitheRock': $= obj; $$= obj.theLava; break;
+  case 'LithePath': {
+  const path_lib= obj as { [key :string] :(it? :string)=>AssociativeArray<AssociativeArray<unknown>>; };
+if (path_lib) {} else throw 'Not loaded';
+  const path_obj= path_lib['pathObje']();
+if (path_obj) {} else throw 'Not found';
+  stobje._= path_obj['_']; console.warn('_ IS ' + JSON.stringify(stobje._));
+  stobje.__= path_obj['__'];
 
-|| cz === 64 // What about using 37, anyway?  SP would be best, I suppose?  Tricky one.
-
-    ) {} else throw 'Not at 110 on 20250422 at 1744';
-    if (it.charCodeAt(0) !== 95) {} else if ((il-= 3) >= 2) {} // throw invalid length:
-                                    else throw 'Not at 111 on 20250422 at 2241';
-    rv= decomposing(it);
-    it= it.substring(rv!==190? 0: 2, il); // *can* yield an empty string, ie not throw
-    sa[at]= it /**\ + '#' + rv /**/ ;
-  }
-  return rv;
-};/**\
-const f_out= function (this :number[], v :string, i :number, a :string[]) :void { v; a;
-  const t= this[i]; t;
-};/**/
-type eo_t_= { _  :AssociativeArray<number>;
-              __ :AssociativeArray<string>;
-              it :(number|string|null);     };
-;
-const emptyobj= () :eo_t_=> {
-  const n= {} as AssociativeArray<number>;
-  const s= {} as AssociativeArray<string>;
-  const rv= { _: n, __: s, it: null, };
-  return rv;
-};
-const f_in_= (t_ :number[]
-          )=>(rv :eo_t_, v :string, i :number, a :string[])=> { a;
-  const t= t_[i];
-
-if (!veracity) {} else
-{
-//let out_ :boolean;
-const S= 1, C= 0, U= undefined as (number|undefined), N= null as (number|null); S; C;
-if (((N as number)>>>0&1)>=0) {} else { throw 'Nope' }
-if (((U as number)>>>0&1)>=0) {} else { throw 'Nope' }
-//throw 'OK';
+  } break;
 }
 
-if (veracity) {
-  const pre= t>>>0&1;
-       if (t===190) rv.it= v;
-  else if ((t-96>>>0)<20 || t===91) rv.it= 0-parseFloat(v);
-  else if (t!==191
+    if (!it) {} else return wait4(it, to, wait);
+    return undefined as unknown;
+    };
+  thingWaitedBefore(al, 0)(undefined as unknown as any);
+/**\
+  const something2Do= (doMore= false
+                   )=>{console.log(JSON.stringify($$.throwNaN(true)())); };
+  $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock'); /**/
 
-|| v.length<2 // TODO= LOSE
-
-          ) {}
-  else if ('number' === typeof rv.it) { rv._[v.substring(pre)]= rv.it; }
-       else if ('string' === typeof rv.it) { rv.__['$'+v.substring(pre)]= rv.it; }
-       else if (rv.it === null) {}
-//       else if ('object' === (typeof (rv.it))) {}
-       else throw 'Not at 138 on 20250423 at 2343';
-
-} else switch (0) {} // TODO= LOSE tests, above
-  return rv;
-};
-
-const decomposer= (it :string) =>{
-  it= precomposer(it);  const il= it.length;
-  const sa__= decompose(it), sj= sa__.join(''), sl= sj.length;
-//console.log("\n" + it.length + it + "\" -> " + JSON.stringify(sa) + " # = " + sl);
-  if (sl===il || !atPlay()) {} else throw 'Not at 121 on 20250422 at 1732'; // TODO?= better (ideally)
-  const a= sa__.filter(decofilter);
-  const t= a.map(decomapping);
-//  a.forEach(f_out, t);
-  const rv= a.reduceRight(f_in_(t), emptyobj());
-
-console.log(''+a.join('¬'));
-  return rv;
-};
-const patches= ''
-  + 'HALVE' + 'HH42' // +42
-  + 'HHUFF' + 'H032' // -32
-//+ 'HULCE' + 'HH55' // -32 // TODO?= FIX or REPORT= not a string (which it isn't!)
-  + 'HHOPE' + 'HH3Q2808' // +3...
-  + 'HUQxyUQUQU' + 'HUQyzUQUQU' + 'HUQxyzUQUQU';
-
-const patch4decomposer= ('/'+patches+'/')
-                        .replace(/Q/g, '.').replace(/U/g, '_').replace(/H/g, '-');
-
-const decomposer_patch= (path :string) :eo_t_=>{
-  if (falsity) return 'No stobje!' as unknown as eo_t_; else {
-  const it = decomposer(path!=="/play/"? path: patch4decomposer); // TODO?= USE= atPlay()
-//  const it :stobje_t_= it_; stobje= it;
-  stobje._= it._;  stobje.__= it.__;
-  return it; // is infelicitous, but WTH
-}};
-
-(((path :string)=>{ const it= decomposer_patch(path);
-                    console.log("At 138 it's " + '\"' + JSON.stringify(it) + '\"');
-})(location.pathname));
-
-//
-                                 }); // END timeout
-
-            set_timeout(101)(()=>{ // unnecessary
-//
-if (atPlay()) {} else
-set_timeout(666)(()=>{ const goaw= globje as Window;
-                       const gdoc= goaw.document;
-  const para1= gdoc.getElementById("para1") as HTMLParagraphElement | null;
-  const percent= (stobje._ as AssociativeArray<number> // TODO= MOVE ie NOT here FFS
-                 )['_z'] || 222;
-
-  if (!para1) { ; /**/ } else { ; para1.style.fontSize= ''+percent+'%'; }
-                     }); // END inner timeout
+//  const $$$$= rock_lub['theLava'] as { [key :string] :any; };
+//  const rock_lib= globje['NML11th_LitheRock'] as { [key :string] :(it? :string)=>typeof globje; };
+  const path_lib= globje['NML11th_LithePath'] as { [key :string] :(it? :string)=>typeof globje; };
+if (path_lib) {} else throw 'Not loaded';
+  const path_obj= path_lib['pathObje']();
+if (path_obj) {} else throw 'Not found';
+ // stobje._= path_obj['_']; // console.log('_ IS ' + JSON.stringify(path_obj['_']));
+  console.log('At 91 _ IS ' + JSON.stringify(path_obj['_']));
+  stobje.__= path_obj['__'];
+})());
 
  /*\ \**/ /**\ \**/ /**\ \**/
+
+if (atPlay()) {} else set_timeout(101)(()=>{
+  const goaw= globje as Window;  const gdoc= goaw.document;
+  const para1= gdoc.getElementById("para1") as HTMLParagraphElement | null;
+
+  if (!para1) {} else { const numbers= stobje._ as AssociativeArray<number>;
+                        para1.style.fontSize= '' + (numbers['_z']||222) + '%';
+                      }}); // END inner timeout
+
+ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
 
 ;type mP_t_= (s :string, n :number) => string; // TODO?= LOSE somehow
 ;
