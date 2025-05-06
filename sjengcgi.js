@@ -9,120 +9,132 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 ;
+;
 //
-/*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
+/**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
 //
-(((globje_) => {
-    let game = ''; // 'e2e4&e7e5&g1f3&'; // =to play black; NB: trailing '&' is reqd
+(((globje_
+/////
+) => {
+    let game = ''; // 'e2e4&e7e5&g1f3&'; // =play black; trailing '&' is reqd!
     const globje = globje_();
     globje;
     const stobje = { _: {}, __: {}, };
     stobje; // TODO= FIX= types
     ;
     ;
-    ;
     const veracity = true;
     const falsity = false;
     veracity;
     falsity;
-    function atPlay() { return (location.pathname) === '/play/'; } // atPlay;
-    const set_timeout = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
+    function atPlay() { return (location.pathname) === '/play/'; }
+    const set_timeout_old = (ms) => (fn, ...args) => setTimeout(fn, ms, ...args);
     //
-    /**\  const
-          stillBest= (best :string, test :string
-                  )=> (    (b :string, t :string, d: number
-                        )=> (d<0 || !d && b<t)
-                      )        (best, test, test.length - best.length)? best: test;
-          const
-          myName___= (name :string, obje= globje
-                  )=> Object.keys(obje)
-                            .filter((key)=> 1+key.search(new RegExp(name+'[$_]*')))
-                            .reduce(stillBest, ''); // TODO= LOOP via set_timeout()
-          const
-          myName__= (genus :string, obje= globje
-                 )=>(species :string
-                 )=> myName___(genus + '_' + species, obje);
-          const
-          myName_= myName__('NML11th'),
-          myName= myName_('LithePath'); myName; /**/
+    /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+    //
+    const allLoaded = {};
+    //
+    function theCB(it_, is_) {
+        switch (it_) {
+            case 'LithePath':
+                {
+                    const path_lib = is_;
+                    if (path_lib) { }
+                    else
+                        throw 'Not loaded at 31: ' + it_;
+                    const path_obj = path_lib['pathObje']();
+                    console.log('Obtained: ' + JSON.stringify(path_obj));
+                    if (path_obj) { }
+                    else
+                        throw 'Not fitted at 33: pathObje()';
+                    stobje._ = path_obj['_'];
+                    stobje.__ = path_obj['__'];
+                }
+                break;
+            default: throw 'Not at 38 on 20250506 at 0006';
+        }
+    }
+    //
+    /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+    //
+    if (!!!veracity) { }
+    else
+        ((() => {
+            //
+            let genus_, gen_spec; // NB: Careful: these are assigned late
+            //
+            const prepare = (prfx, genus = 'NML11th', self = 'Rock') => (...list) => {
+                genus_ = genus += '_';
+                gen_spec = genus + prfx + self;
+                list[list.length] = self;
+                list[list.length] = '';
+                return list.map((it) => (it ? prfx + it : ''));
+            };
+            //
+            const execute = ((() => {
+                //
+                let $, $$;
+                //
+                if (veracity) { }
+                else {
+                    const _out = undefined;
+                    _out;
+                    const __out = undefined;
+                    __out;
+                }
+                //
+                const dothejob = (cb, libs, wait0) => {
+                    //
+                    const rock_1st = globje[gen_spec];
+                    $ = rock_1st;
+                    $$ = rock_1st.theLava;
+                    const wait4 = (it, to, wait // TODO= NIX nmlName
+                    ) => ($.waitFor(to, $.nmlName, $$._15ns26sequence(wait)))(it);
+                    const dothejob_ = (todo, wait = 1) => (obj) => {
+                        console.log('Doing #' + todo + ' in' + JSON.stringify(libs));
+                        const at = libs[todo];
+                        const it = libs[--todo]; // console.log('\n= '+it+' after '+at);
+                        const to = dothejob_(todo);
+                        const link = (s = at, o = obj) => {
+                            if (s) { }
+                            else
+                                throw 'Not at 62 on 20250505 at 2355';
+                            allLoaded[s] = o;
+                            console.log(s + ' seems OK');
+                            return s;
+                        };
+                        if (!at) { }
+                        else if (libs[todo + 2])
+                            cb(link(), obj);
+                        else {
+                            $ = obj;
+                            $$ = obj.theLava;
+                            link();
+                        }
+                        if (!it) { }
+                        else
+                            return wait4(it, to, wait);
+                        return undefined; // TODO= tighten-up types
+                    };
+                    return dothejob_(libs.length - 1, wait0);
+                };
+                return dothejob;
+                //
+            })());
+            //
+            execute(theCB, prepare('Lithe')('', 'Path'), 0)(undefined);
+            //
+        })());
+    //
+    /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
     //
     if (falsity) { }
     else
-        set_timeout(666)(() => {
+        set_timeout_old(666)(() => {
             //
-            /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
-            const allLoaded = {};
-            ((() => {
-                let $, $$;
-                const rock_lub = globje['NML11th_LitheRock'];
-                $ = rock_lub;
-                $$ = rock_lub.theLava;
-                const wait4 = (it, to, waits_ = 1) => ($.waitFor(to, $.nmlName, $$._15ns26sequence(waits_)))(it);
-                const thingsToWaitFor = ['', 'LithePath', 'LitheRock', ''];
-                const al = thingsToWaitFor.length - 1;
-                const thingWaitedBefore = (what, wait = 1) => (obj) => {
-                    const at = thingsToWaitFor[what];
-                    const it = thingsToWaitFor[--what];
-                    const to = thingWaitedBefore(what);
-                    const link = (s = at, o = obj) => {
-                        if (s) { }
-                        else
-                            throw 'Not at 59';
-                        allLoaded[s] = o;
-                        console.warn(s + ' seems OK?');
-                        return s;
-                    };
-                    if (!at) { }
-                    else
-                        switch (link()) {
-                            case 'LitheRock':
-                                $ = obj;
-                                $$ = obj.theLava;
-                                break;
-                            case 'LithePath':
-                                {
-                                    const path_lib = obj;
-                                    if (path_lib) { }
-                                    else
-                                        throw 'Not loaded';
-                                    const path_obj = path_lib['pathObje']();
-                                    if (path_obj) { }
-                                    else
-                                        throw 'Not found';
-                                    stobje._ = path_obj['_'];
-                                    console.warn('_ IS ' + JSON.stringify(stobje._));
-                                    stobje.__ = path_obj['__'];
-                                }
-                                break;
-                        }
-                    if (!it) { }
-                    else
-                        return wait4(it, to, wait);
-                    return undefined;
-                };
-                thingWaitedBefore(al, 0)(undefined);
-                /**\
-                  const something2Do= (doMore= false
-                                   )=>{console.log(JSON.stringify($$.throwNaN(true)())); };
-                  $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock'); /**/
-                //  const $$$$= rock_lub['theLava'] as { [key :string] :any; };
-                //  const rock_lib= globje['NML11th_LitheRock'] as { [key :string] :(it? :string)=>typeof globje; };
-                const path_lib = globje['NML11th_LithePath'];
-                if (path_lib) { }
-                else
-                    throw 'Not loaded';
-                const path_obj = path_lib['pathObje']();
-                if (path_obj) { }
-                else
-                    throw 'Not found';
-                // stobje._= path_obj['_']; // console.log('_ IS ' + JSON.stringify(path_obj['_']));
-                console.log('At 91 _ IS ' + JSON.stringify(path_obj['_']));
-                stobje.__ = path_obj['__'];
-            })());
-            /*\ \**/ /**\ \**/ /**\ \**/
             if (atPlay()) { }
             else
-                set_timeout(101)(() => {
+                set_timeout_old(101)(() => {
                     const goaw = globje;
                     const gdoc = goaw.document;
                     const para1 = gdoc.getElementById("para1");
@@ -131,7 +143,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                         const numbers = stobje._;
                         para1.style.fontSize = '' + (numbers['_z'] || 222) + '%';
                     }
-                }); // END inner timeout
+                });
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             ;
             ;
@@ -216,6 +228,33 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 return (it + it.slice(0, 2)).split('\|').map(the_square(idy)).join('&nbsp;'); // TODO= NBSPs
             };
             /*\ \**/ /**\ \**/
+            const rank09__ = (it, mi = 201) => {
+                const so = it >= 0;
+                const un = so ? it : 0 - it;
+                const by = it / un;
+                let at = un << 1;
+                it = mi - by * 9;
+                let rv = '';
+                for (let i = 9 + 1; --i; at = it += by << 1)
+                    rv += '&#' + (at >>> 1) + ';&nbsp;';
+                rv += '&#' + un + ';';
+                return rv;
+            };
+            ;
+            ;
+            const rank09_ = () => {
+                return {
+                    0: rank09__(-9673),
+                    1: rank09__(9678),
+                    8: rank09__(9673),
+                    9: rank09__(-9678),
+                };
+            };
+            const rank09 = ((() => {
+                let once = 2;
+                let obje = undefined;
+                return () => ((once >>= 1) ? obje = rank09_() : obje);
+            })());
             function dostAsyncly(elem, field, what, move) {
                 return __awaiter(this, void 0, void 0, function* () {
                     const alpha = yield fetch(what); // const response = await fetch(url);
@@ -237,9 +276,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     game += move + reply + '&';
                     field.value = '';
                     const board = gamma.slice(-9, -1).map(a_rank(unrotated)).join('<br />');
-                    const upper = unrotated ? '◉ a b c d e f g h ◉' : '◎ h g f e d c b a ◎';
-                    const lower = unrotated ? '◎ a b c d e f g h ◎' : '◉ h g f e d c b a ◉';
-                    const rslt = upper + '<br />' + board + '<br />' + lower;
+                    //  const upper= unrotated? '◉ a b c d e f g h ◉': '◎ h g f e d c b a ◎';
+                    //  const lower= unrotated? '◎ a b c d e f g h ◎': '◉ h g f e d c b a ◉';
+                    //  const rslt= upper + '<br />' + board + '<br />' + lower;
+                    const edges = rank09();
+                    const rslt = edges[9 ^ unrotated] + '<br />' + board + '<br />' + edges[unrotated];
                     if (elem)
                         elem.innerHTML = rslt;
                     else
@@ -281,6 +322,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 _out;
             } // typecheck
             console.log("At 281 it's an " + typeof ((() => { }).constructor('return this;')()['dostSyncly']('', 'e2e4')));
+            console.log('' + JSON.stringify(rank09()));
             //
         }); // END timeout
     //
@@ -291,5 +333,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 //
 /*\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/
 //
-;
 ;
