@@ -1,20 +1,48 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 ;
 ;
 (((globje_) => {
     const globje = globje_();
     globje;
     const pathname = globje['location'].pathname;
+    pathname;
     const veracity = true;
     const falsity = false;
     veracity;
     falsity;
     function atPlay() { return (pathname) === '/play/'; }
-    ;
-    atPlay; /*
-    const set_timeout_out= (ms :number
-                        )=>(fn :(...out :any[])=>void, ...args :any[]
-                        )=> setTimeout(fn, ms, ...args); set_timeout_out;/**/
+    atPlay;
+    //
+    const document__ = globje['document'];
+    document__;
+    const document = undefined;
+    document;
+    //      const elemById= document.getElementById;
+    const set_timeout_ole = (ms) => (fn, ...args // TODO= all
+    ) => setTimeout(fn, ms, ...args);
+    set_timeout_ole;
+    const getDocElementById = (gdoc = document__, okok = undefined) => (it) => { var _a; return ((_a = gdoc.getElementById(it)) !== null && _a !== void 0 ? _a : okok); };
+    const getElementById = getDocElementById();
+    getElementById;
+    /**\
+   const getDocElementById_out= (ok :HTMLElement
+                             )=>(gdoc :Document= document
+                             )=>(it :string)=> (gdoc.getElementById(it) ?? ok);
+    /**/
+    /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+    //
+    /**\ const set_timeout_out= (ms :number
+                             )=>(fn :(...out :any[])=>void, ...args :any[]
+                             )=> setTimeout(fn, ms, ...args); set_timeout_out;/**/
     ;
     ;
     const notTimeout = (setfn, rv, ...args) => (setfn(...args),
@@ -80,11 +108,65 @@
                 const ff = f(f);
                 ff();
             };
+            //
+            /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+            //
+            ;
+            ;
+            ;
+            ;
+            ;
+            ;
+            const w4d_cb_eg_ = (gEl, fn0) => /**\ const w4d_cb_eg= /**/ (em, it = globje) => {
+                const suf = '_';
+                const fn1 = (q, v) => (q[v + suf] = gEl(v), q);
+                const fn2 = fn0 ? (q, v) => (q[fn0(v)] = gEl(v), q) : fn1; /**/
+                console.warn(''
+                    + 'Adding \"' + em.map(fn0 ? fn0 : (s) => (s + suf)).join('\",\"')
+                    + '\" to ' + Object.keys(it).join()); /**/
+                return em.reduceRight(fn2, it);
+            };
+            //
+            /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+            //
+            const wait4doc = (((document_fb) => {
+                //const document_= undefined; document_;
+                const unready = 1 << "uninitialized".length | 1 << "loading".length; // vector
+                const isready = (document_ = document_fb) => !(unready & 1 << document_.readyState.length);
+                const wait4doc_ = (s2s, gDEl /**\ :typeof getDocElementById /**/ = getDocElementById) => (document_ = document_fb
+                //                )=>(cb :cbf_t_
+                ) => (...names) => {
+                    let once = 2;
+                    const gEl = gDEl(document_);
+                    const cb = w4d_cb_eg_(gEl, s2s);
+                    const ignite = () => {
+                        console.log("Document is " + document_.readyState); // Remove this line later, obviously
+                        if ((once >>= 1) === 0) {
+                            console.log("We ignited again, but who cares?");
+                        } // idempotent
+                        else {
+                            console.log("We're igniting!"); // Remove this line later, obviously
+                            //        globje__['para1_']= document_.getElementById('para1');
+                            cb(names);
+                            //        globje__['text1_']= document_.getElementById('text1');
+                            console.log("We ignited!"); // Remove this line later, obviously
+                        }
+                    };
+                    const rscListener = (event) => { if (event && isready(document_))
+                        ignite(); };
+                    document_.addEventListener('readystatechange', rscListener);
+                    if (isready(document_))
+                        ignite();
+                };
+                return wait4doc_;
+            })(document__));
+            //function readiness_out() { return 1 << document.readyState.length; } // use length as hash
+            //
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             const theLava = // IIFE
              ((() => {
                 return {
-                    throwNaN, _15ns26sequence
+                    throwNaN, _15ns26sequence, wait4doc,
                 };
             })());
             const toExport = // IIFE
@@ -130,7 +212,7 @@
                     + JSON.stringify($.nmlName('LitheRock')) + '!\n'
                     + JSON.stringify($.nmlName('LithePath')) + '!\n'
                     + JSON.stringify('' + $$.throwNaN(!1)()) + '!\n');
-            ((() => {
+            ((() => __awaiter(void 0, void 0, void 0, function* () {
                 function dur(it) {
                     const g = $.theLava._15ns26sequence(it);
                     let j = 0;
@@ -157,18 +239,21 @@
                     return rv;
                 })()));
                 const something2Do = (doMore = false) => (it) => {
+                    doMore;
                     /**\if (doMore) ( $.waitFor(something2Do(), $.nmlName, $$._15ns26sequence(1)) )
                                                                                      ('LithePath');
                     /**/ console.log(JSON.stringify(it.theLava.throwNaN(true)()));
                 };
                 $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock');
-            })());
+            }))());
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
-            if (!!always) { }
+            if (!!!always) { }
             else // IIFE
                 (((test) => {
                     ;
                     console.log("It's still just a " + test);
+                    $$.wait4doc(undefined)()('para1', 'text1');
+                    // TODO?= PASS= callback component
                 })('test'));
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             /*  END vectors  */ _._._._._._._._._._._._._._._._._._._;
