@@ -1,5 +1,5 @@
 "use strict";
-/**\ vim: set syntax=typescript :miv TODO?= censor this, too /**/
+/**\ vim: set syntax=typescript :miv -+- the ROCK -:= /**/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -252,7 +252,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             const theLava = // IIFE
              ((() => {
                 return {
-                    throwNaN, _15ns26sequence, wait4doc,
+                    throwNaN, _15ns26sequence, wait4doc, wait4all,
                 };
             })());
             const toExport = // IIFE
@@ -292,55 +292,59 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         ((($) => {
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             const $$ = $.theLava;
-            if (!always) { }
-            else
-                console.log('\n'
-                    + JSON.stringify($.nmlName('LitheRock')) + '!\n'
-                    + JSON.stringify($.nmlName('LithePath')) + '!\n'
-                    + JSON.stringify('' + $$.throwNaN(!1)()) + '!\n');
-            ((() => {
-                function dur(it) {
-                    const g = $.theLava._15ns26sequence(it);
-                    let j = 0;
-                    const k = 999999;
-                    let i, t = 0;
-                    for (i = k; !!(j = g(j)) && --i;)
-                        t += j >>> 16;
-                    if (i) { }
-                    else if (falsity)
-                        throw 'Excessive iter.';
-                    else
-                        return +Infinity;
-                    return /**/ (t / 60 >>> 0) / 1000.0; /*/ k-i /**/
-                    ;
-                }
-                //for (let i= 44, j= 1; --i; ) console.log(''+(j= (j>>>0<<1>>>0|j>>>1)));
-                //for (let i= 4, j= 1; --i; ) console.log(''+(j= (j>>>0<<1>>>0|j>>>1)>>>0));
-                //for (let i= 44, j= 0; --i; ) console.log(''+(j= ((j<<1>>>0|1)>>>0)+(j>>>1)));
-                //  console.log('#1= '+((()=>{ const n= -1, p= n>>>1; return n>>>0|p; })()));
-                console.log('#2=..' + ((() => {
-                    let rv = '';
-                    for (let i = 19; --i >= 0;)
-                        rv += ', ' + i + ': ' + dur(i);
-                    return rv;
-                })()));
-                const something2Do = (doMore = false) => (it) => __awaiter(void 0, void 0, void 0, function* () {
-                    doMore;
-                    /**\if (doMore) ( $.waitFor(something2Do(), $.nmlName, $$._15ns26sequence(1)) )
-                                                                                     ('LithePath');
-                    /**/ console.log(JSON.stringify(it.theLava.throwNaN(true)()));
-                });
-                $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock');
-            })());
-            /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
-            if (!!!always) { }
-            else // IIFE
-                (((test) => {
-                    ;
-                    console.log("It's still just a " + test);
-                    $$.wait4doc(undefined)()('para1', 'text1');
-                    // TODO?= PASS= callback component
-                })('test'));
+            $$;
+            if (!!always) { }
+            else { // BEGAN w/ $$; TODO= atPlay
+                if (!always) { }
+                else
+                    console.log('\n'
+                        + JSON.stringify($.nmlName('LitheRock')) + '!\n'
+                        + JSON.stringify($.nmlName('LithePath')) + '!\n'
+                        + JSON.stringify('' + $$.throwNaN(!1)()) + '!\n');
+                ((() => {
+                    function dur(it) {
+                        const g = $.theLava._15ns26sequence(it);
+                        let j = 0;
+                        const k = 999999;
+                        let i, t = 0;
+                        for (i = k; !!(j = g(j)) && --i;)
+                            t += j >>> 16;
+                        if (i) { }
+                        else if (falsity)
+                            throw 'Excessive iter.';
+                        else
+                            return +Infinity;
+                        return /**/ (t / 60 >>> 0) / 1000.0; /*/ k-i /**/
+                        ;
+                    }
+                    //for (let i= 44, j= 1; --i; ) console.log(''+(j= (j>>>0<<1>>>0|j>>>1)));
+                    //for (let i= 4, j= 1; --i; ) console.log(''+(j= (j>>>0<<1>>>0|j>>>1)>>>0));
+                    //for (let i= 44, j= 0; --i; ) console.log(''+(j= ((j<<1>>>0|1)>>>0)+(j>>>1)));
+                    //  console.log('#1= '+((()=>{ const n= -1, p= n>>>1; return n>>>0|p; })()));
+                    console.log('#2=..' + ((() => {
+                        let rv = '';
+                        for (let i = 19; --i >= 0;)
+                            rv += ', ' + i + ': ' + dur(i);
+                        return rv;
+                    })()));
+                    const something2Do = (doMore = false) => (it) => __awaiter(void 0, void 0, void 0, function* () {
+                        doMore;
+                        /**\if (doMore) ( $.waitFor(something2Do(), $.nmlName, $$._15ns26sequence(1)) )
+                                                                                         ('LithePath');
+                        /**/ console.log(JSON.stringify(it.theLava.throwNaN(true)()));
+                    });
+                    $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock');
+                })()); // ENDED IIFE
+                /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+                if (!!!always) { }
+                else // IIFE
+                    (((test) => {
+                        ;
+                        console.log("It's still just a " + test);
+                        $$.wait4doc(undefined)()('para1', 'text1');
+                        // TODO?= PASS= callback component
+                    })('test'));
+            } // ENDED w/ $$
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             /*  END vectors  */ _._._._._._._._._._._._._._._._._._._;
             return;

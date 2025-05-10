@@ -57,7 +57,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     //
     /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
     //
-    if (!!!veracity) { }
+    if (! !veracity) {
+ }
     else
         ((() => {
             //
@@ -122,7 +123,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 //
             })());
             //
-            execute(theCB, prepare('Lithe')('', 'Path'), 0)(undefined);
             //
         })());
     //
@@ -131,7 +131,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     if (falsity) { }
     else
         set_timeout_old(666)(() => {
-            //
+
+set_timeout_old(0)(() => {
+globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
+});
+
             if (atPlay()) { }
             else
                 set_timeout_old(101)(() => {
