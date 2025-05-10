@@ -1,4 +1,5 @@
 "use strict";
+/**\ vim: set syntax=typescript :miv TODO?= censor this, too /**/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -111,6 +112,91 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             //
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             //
+            const wait4all = ((() => {
+                //
+                let genus_, gen_spec; // NB: Careful: these are assigned late
+                const hits = {};
+                //
+                const prepare = (prfx, genus = 'NML11th', self = 'Rock') => (...list) => {
+                    genus_ = genus += '_';
+                    genus_;
+                    gen_spec = genus + prfx + self;
+                    list[list.length] = self;
+                    list[list.length] = '';
+                    return list.map((it) => (it ? prfx + it : ''));
+                };
+                //
+                const execute = ((() => {
+                    //
+                    let $, $$;
+                    //
+                    if (veracity) { }
+                    else {
+                        const _out = undefined;
+                        _out;
+                        const __out = undefined;
+                        __out;
+                    }
+                    //
+                    const dothejob = (cb, libs, wait0) => {
+                        //
+                        const rock_1st = globje[gen_spec];
+                        $ = rock_1st;
+                        $$ = rock_1st.theLava;
+                        const wait4 = (it, to, wait // TODO= NIX nmlName
+                        ) => ($.waitFor(to, $.nmlName, $$._15ns26sequence(wait)))(it);
+                        const dothejob_ = (todo, wait = 1) => (obj) => {
+                            console.log('Doing #' + todo + ' in' + JSON.stringify(libs));
+                            const at = libs[todo];
+                            const it = libs[--todo]; // console.log('\n= '+it+' after '+at);
+                            const to = dothejob_(todo);
+                            const link = (s = at, o = obj) => {
+                                if (s) { }
+                                else
+                                    throw 'Not at 62 on 20250505 at 2355';
+                                console.log(s + ' seems OK');
+                                hits[s] = o;
+                                return s;
+                            };
+                            if (!at) {
+                                ;
+                                ;
+                            }
+                            else {
+                                if (libs[todo + 2]) { }
+                                else {
+                                    $ = obj;
+                                    $$ = obj.theLava;
+                                }
+                                cb(link(), obj);
+                            }
+                            if (!it) { }
+                            else
+                                wait4(it, to, wait);
+                            return hits;
+                        };
+                        return dothejob_(libs.length - 1, wait0);
+                    };
+                    return dothejob;
+                    //
+                })());
+                //
+                ;
+                ;
+                return (theCB, ...list) => {
+                    if (list.length && !list[0]) { }
+                    else
+                        throw 'Not at 99 on 20250510 at 1431';
+                    return execute(theCB, prepare('Lithe')(...list), 0)(undefined);
+                };
+                //
+            })());
+            //
+            /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+            //
+            //
+            /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
+            //
             ;
             ;
             ;
@@ -212,7 +298,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     + JSON.stringify($.nmlName('LitheRock')) + '!\n'
                     + JSON.stringify($.nmlName('LithePath')) + '!\n'
                     + JSON.stringify('' + $$.throwNaN(!1)()) + '!\n');
-            ((() => __awaiter(void 0, void 0, void 0, function* () {
+            ((() => {
                 function dur(it) {
                     const g = $.theLava._15ns26sequence(it);
                     let j = 0;
@@ -238,14 +324,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                         rv += ', ' + i + ': ' + dur(i);
                     return rv;
                 })()));
-                const something2Do = (doMore = false) => (it) => {
+                const something2Do = (doMore = false) => (it) => __awaiter(void 0, void 0, void 0, function* () {
                     doMore;
                     /**\if (doMore) ( $.waitFor(something2Do(), $.nmlName, $$._15ns26sequence(1)) )
                                                                                      ('LithePath');
                     /**/ console.log(JSON.stringify(it.theLava.throwNaN(true)()));
-                };
+                });
                 $.waitFor(something2Do(true), $.nmlName, $$._15ns26sequence(2))('LitheRock');
-            }))());
+            })());
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
             if (!!!always) { }
             else // IIFE
