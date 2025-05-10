@@ -51,6 +51,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     stobje.__ = path_obj['__'];
                 }
                 break;
+            case 'LitheRock': break;
             default: throw 'Not at 38 on 20250506 at 0006';
         }
     }
