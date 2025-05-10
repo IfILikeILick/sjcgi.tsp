@@ -1,4 +1,5 @@
 "use strict";
+/**\ vim: set syntax=typescript :miv -+- very alpha MATE -:= /**/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -32,42 +33,62 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     //
     /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
     //
-    const allLoaded = {};
-    //
     function theCB(it_, is_) {
         switch (it_) {
+            case 'LitheRock':
+                {
+                    const rock_lib = is_;
+                    if (rock_lib) { }
+                    else
+                        throw 'Not loaded at 31: ' + it_;
+                    const lava_lib = rock_lib['theLava'];
+                    console.log('Obtained lava[](): ' + JSON.stringify(lava_lib));
+                    if (lava_lib) { }
+                    else
+                        throw 'Not fitted at 33: theLava';
+                    lava_lib.wait4doc(undefined)()('para1', 'text1'); // the HTML elems
+                }
+                break;
             case 'LithePath':
                 {
                     const path_lib = is_;
                     if (path_lib) { }
                     else
-                        throw 'Not loaded at 31: ' + it_;
+                        throw 'Not loaded at 38: ' + it_;
                     const path_obj = path_lib['pathObje']();
-                    console.log('Obtained: ' + JSON.stringify(path_obj));
+                    console.log('Obtained path[][]: ' + JSON.stringify(path_obj));
                     if (path_obj) { }
                     else
-                        throw 'Not fitted at 33: pathObje()';
+                        throw 'Not fitted at 41: pathObje()';
                     stobje._ = path_obj['_'];
                     stobje.__ = path_obj['__'];
+                    calling(); // forward
                 }
                 break;
-            case 'LitheRock': break;
-            default: throw 'Not at 38 on 20250506 at 0006';
+            default: throw 'Not a known Lithe at 44 on 20250510 at 2254';
         }
     }
     //
     /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
     //
-    if (! !veracity) {
- }
+    if (!!veracity) {
+        globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
+    }
     else
         ((() => {
             //
             let genus_, gen_spec; // NB: Careful: these are assigned late
+            const allLoaded = {};
+            //
+            {
+                const out = undefined;
+                out;
+            }
             //
             const prepare = (prfx, genus = 'NML11th', self = 'Rock') => (...list) => {
                 genus_ = genus += '_';
                 gen_spec = genus + prfx + self;
+                genus_;
                 list[list.length] = self;
                 list[list.length] = '';
                 return list.map((it) => (it ? prfx + it : ''));
@@ -105,13 +126,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                             console.log(s + ' seems OK');
                             return s;
                         };
-                        if (!at) { }
-                        else if (libs[todo + 2])
-                            cb(link(), obj);
+                        if (!at) {
+                            ;
+                            ;
+                        }
                         else {
-                            $ = obj;
-                            $$ = obj.theLava;
-                            link();
+                            if (libs[todo + 2]) { }
+                            else {
+                                $ = obj;
+                                $$ = obj.theLava;
+                            }
+                            cb(link(), obj);
                         }
                         if (!it) { }
                         else
@@ -124,19 +149,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 //
             })());
             //
+            execute(theCB, prepare('Lithe')('', 'Path'), 0)(undefined);
             //
         })());
     //
     /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
     //
-    if (falsity) { }
-    else
-        set_timeout_old(666)(() => {
-
-set_timeout_old(55)(() => {
-globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
-});
-
+    function calling() {
+        set_timeout_old(0)(() => {
+            //
             if (atPlay()) { }
             else
                 set_timeout_old(1984)(() => {
@@ -150,7 +171,6 @@ globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
                     }
                 });
             /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
-            ;
             ;
             const makePieces = (overrides, prefix = '_') => {
                 const qf = (s, n /**/) => {
@@ -204,12 +224,12 @@ globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
                 + s.split('').filter((c) => (c.charCodeAt(0) - 97) >>> 0 >= 26).map((c) => (c + c.charCodeAt(0).toString(10))).join()
                 + '\n' + toLose({}, s));
             // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
-            const the_squares_ = (pref, twice = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
+            const the_squares__ = (pref, once = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
             ) => (idy // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
             ) => (it_, idx) => {
                 const syms = pref + '△▲○hn●fu□■ck⚐⚑♡♥◇◆itbrokesomehow_•_±×◎↑↓☖☗';
                 if (!!!veracity) { }
-                else if ((twice >>>= 1) === 0) { }
+                else if ((once >>>= 1) === 0) { }
                 else {
                     console.log(charCodes(syms));
                 }
@@ -222,10 +242,18 @@ globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
                 // console.log("It's a '"+sym+"': "+it_);
                 return sym;
             };
+            const the_squares_ = (_) => {
+                const f = makePieces(stobje._);
+                return the_squares__(''
+                    + f('x', 0) + '' + f('p', 6) + '' + f('b', 4) + 'ohnofu'
+                    + f('k', 1) + 'ck'
+                    + f('n', 5) + '' + f('q', 2) + '' + f('r', 3) + 'itbrokesomehow');
+            };
             const a_square = the_squares_(' ·○●'); // TODO= '◎' and NBSP
             const o_square = the_squares_(' ·↓↑');
             const e_square = the_squares_(' ·↑↓');
             a_square(0)('', 0);
+            console.warn('(PREV)');
             const a_rank = (unrotated) => (it, idy) => {
                 const the_squares = unrotated ? e_square : o_square;
                 a_square;
@@ -243,6 +271,7 @@ globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
                 for (let i = 9 + 1; --i; at = it += by << 1)
                     rv += '&#' + (at >>> 1) + ';&nbsp;';
                 rv += '&#' + un + ';';
+                console.warn(rv);
                 return rv;
             };
             ;
@@ -330,6 +359,7 @@ globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
             console.log('' + JSON.stringify(rank09()));
             //
         }); // END timeout
+    } // END calling
     //
 })(// FROM:= const globje= ( ()=>{} ).constructor('return this;')() as Obje;
 (() => { }).constructor('return this;')
