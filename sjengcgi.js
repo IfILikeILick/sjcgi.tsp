@@ -132,7 +132,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     else
         set_timeout_old(666)(() => {
 
-set_timeout_old(0)(() => {
+set_timeout_old(55)(() => {
 globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
 });
 

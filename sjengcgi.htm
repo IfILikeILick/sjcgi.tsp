@@ -12,34 +12,9 @@ TODO: patch-in dostSyncly() properly in JS
 
 
 const globje__ = (() => { }).constructor('return this')();
-
-var once= 2;
-const ignite= function () {
-    
-  console.log("Document is " + document.readyState); // Remove this line later, obviously
-  
-  if ((once>>= 1)===0) { console.log("We ignited again, but who cares?"); } // make idempotent
-  else {
-    console.log("We're igniting!"); // Remove this line later, obviously
-
-    globje__['para1_']= document.getElementById('para1');
-//    globje__['text1_']= document.getElementById('text1');
-
-    console.log("We ignited!"); // Remove this line later, obviously
-  }
-}
-
-function readiness() { return 1 << document.readyState.length; } // use length as hash
-const unready= 1 << "uninitialized".length | 1 << "loading".length; // unreadiness vector
-
-document.addEventListener('readystatechange', event => {
-  if (!event || readiness()&unready) {}
-  else ignite();
-});
-
-if (readiness()&unready) {}
-else ignite();
-
+setTimeout(() => {
+globje__.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
+}, (0));
 
   </script>
 
