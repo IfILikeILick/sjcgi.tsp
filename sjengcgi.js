@@ -138,7 +138,7 @@ globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
 
             if (atPlay()) { }
             else
-                set_timeout_old(101)(() => {
+                set_timeout_old(1984)(() => {
                     const goaw = globje;
                     const gdoc = goaw.document;
                     const para1 = gdoc.getElementById("para1");
