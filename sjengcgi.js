@@ -1,5 +1,5 @@
-/**\ vim: set syntax=typescript :miv -+- very alpha MATE -:= /**/
 "use strict";
+/**\ vim: set syntax=typescript :miv -+- very alpha MATE -:= /**/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -24,6 +24,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     stobje; // TODO= FIX= types
     ;
     ;
+    ((() => {
+        {
+            const out = undefined;
+            out;
+        }
+    })());
     const veracity = true;
     const falsity = false;
     veracity;
@@ -71,21 +77,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     //
     /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**\ \**/ /**75**/
     //
-    if (!!veracity) {
-        globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
-    }
+    if (!!veracity)
+        (((it) => __awaiter(void 0, void 0, void 0, function* () {
+            return (set_timeout_old(0)(it.NML11th_LitheRock.theLava.wait4all, theCB, '', 'Path')
+            //globje.NML11th_LitheRock.theLava.wait4all(theCB, '', 'Path');
+            );
+        }))(globje));
     else
         ((() => {
             //
             let genus_, gen_spec; // NB: Careful: these are assigned late
             const allLoaded = {};
             //
-            {
-                const out = undefined;
-                out;
-            }
-            //
-            const prepare = (prfx, genus = 'NML11th', self = 'Rock') => (...list) => {
+            const prepare_out = (prfx, genus = 'NML11th', self = 'Rock') => (...list) => {
                 genus_ = genus += '_';
                 gen_spec = genus + prfx + self;
                 genus_;
@@ -94,7 +98,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 return list.map((it) => (it ? prfx + it : ''));
             };
             //
-            const execute = ((() => {
+            const execute_out = ((() => {
                 //
                 let $, $$;
                 //
@@ -148,8 +152,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 return dothejob;
                 //
             })());
+            execute_out;
+            prepare_out;
             //
-            execute(theCB, prepare('Lithe')('', 'Path'), 0)(undefined);
+            //execute(theCB, prepare('Lithe')('', 'Path'), 0)(undefined as unknown as any);
             //
         })());
     //
@@ -223,11 +229,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 //+ s.split('').filter( (c)=>(c.charCodeAt(0)-97)>>>0>=26 ).map( (c)=>('x0x'+c.charCodeAt(0).toString(16)) ).join()
                 + s.split('').filter((c) => (c.charCodeAt(0) - 97) >>> 0 >= 26).map((c) => (c + c.charCodeAt(0).toString(10))).join()
                 + '\n' + toLose({}, s));
-            // SYMS= " ·•□■○●◎◉△▲☆★◇◆ ☖☗ ♥♠♣ ↑↓ ±× †‡ ·• ←↔→ ⇐⇔⇒ wʙx ⚐⚑ ♔♚♕♛♖♜♗♝♘♞♙♟"
-            const the_squares__ = (pref, once = 2 // syms= pref+'△▲ohnofu□■ck☆★○●◇◆itbrokesomehow_•_±×◎↑↓';
-            ) => (idy // syms= pref+'♗♝○hn◉fu♔♚ck♘♞♕♛♖♜itbrokesomehow_·•●_±×◎↑↓';
-            ) => (it_, idx) => {
-                const syms = pref + '△▲○hn●fu□■ck⚐⚑♡♥◇◆itbrokesomehow_•_±×◎↑↓☖☗';
+            const the_squares__ = (syms, once = 2) => (idy) => (it_, idx) => {
                 if (!!!veracity) { }
                 else if ((once >>>= 1) === 0) { }
                 else {
@@ -242,16 +244,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 // console.log("It's a '"+sym+"': "+it_);
                 return sym;
             };
-            const the_squares_ = (_) => {
+            const the_squares_ = (_not_used = NaN) => {
                 const f = makePieces(stobje._);
                 return the_squares__(''
                     + f('x', 0) + '' + f('p', 6) + '' + f('b', 4) + 'ohnofu'
                     + f('k', 1) + 'ck'
                     + f('n', 5) + '' + f('q', 2) + '' + f('r', 3) + 'itbrokesomehow');
             };
-            const a_square = the_squares_(' ·○●'); // TODO= '◎' and NBSP
-            const o_square = the_squares_(' ·↓↑');
-            const e_square = the_squares_(' ·↑↓');
+            const a_square = the_squares_(); // TODO= NBSP
+            const o_square = the_squares_();
+            const e_square = the_squares_();
             a_square(0)('', 0);
             console.warn('(PREV)');
             const a_rank = (unrotated) => (it, idy) => {
@@ -310,8 +312,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                     game += move + reply + '&';
                     field.value = '';
                     const board = gamma.slice(-9, -1).map(a_rank(unrotated)).join('<br />');
-                    //  const upper= unrotated? '◉ a b c d e f g h ◉': '◎ h g f e d c b a ◎';
-                    //  const lower= unrotated? '◎ a b c d e f g h ◎': '◉ h g f e d c b a ◉';
+                    //  const upper= unrotated? '@ a b c d e f g h @': '@ h g f e d c b a @'; // fish 1st
+                    //  const lower= unrotated? '@ a b c d e f g h @': '@ h g f e d c b a @'; // fish 2nd
                     //  const rslt= upper + '<br />' + board + '<br />' + lower;
                     const edges = rank09();
                     const rslt = edges[9 ^ unrotated] + '<br />' + board + '<br />' + edges[unrotated];
