@@ -343,7 +343,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 else if (it.length >>> 1 !== 2) { }
                 else { // TODO= ||atPlay()
                     const move = it ? it + '&' : '';
-                    const ante = "http://localhost/cgi-bin/sj5s.sh?d&force&st?5&";
+//                    const ante = "http://localhost/cgi-bin/sj5s.sh?d&force&st?5&";
+const ante = "https://busybox-51d3.onrender.com/cgi-bin/sjeng2s.sh?d&force&st?5&";
                     const post = "go&&d&quit";
                     const prom = dostAsyncly(para1, text1, ante + game + move + post, move);
                     return prom;
