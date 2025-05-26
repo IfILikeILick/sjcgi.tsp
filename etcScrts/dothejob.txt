@@ -3,8 +3,19 @@
 #cd /lib
 #ln -s /etc/secrets/lib*db*.so.*   #TODO= (JUST) LOSE= both
 
-cd /etc/secrets
-pwd
+cd /
+mkdir ./root
+mkdir ./home
+cd /home
+ln -s /etc/secrets .
+cd /root
+ln -s /etc/secrets .
+cd ~
+cd ./root
+realpath .
+ls -l
+echo 'OK...'
+sleep 7
 
 #echo 'quit' | ./sjeng
 #rm -f ./?tstrapc.pdf
