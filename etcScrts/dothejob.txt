@@ -155,7 +155,7 @@ realpath .
 echo '"hi&&there&&player&&two" | tr "&" "\n" | ./cgi-bin/sjcgi.out 2 #...'
 echo "hi&&there&&player&&two" | tr "&" "\n" | ./cgi-bin/sjcgi.out 2
 
-httpd -vv -h . -c /dev/null
+httpd "0.0.0.0:$PORT" -h . -c /dev/null || httpd -vv -h . -c /dev/null
 sleep 2
 ps
 sleep 3
